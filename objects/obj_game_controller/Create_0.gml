@@ -15,7 +15,7 @@ array_fill_1d(global.spaceshipBufferGridY,spaceshipMaxSize,0);
 global.spaceshipBufferHull[0] = "";
 array_fill_1d(global.spaceshipBufferHull,spaceshipMaxSize,"");
 global.spaceshipBufferMaterial[0] = "";
-array_fill_1d(global.spaceshipBufferMaterial,spaceshipMaxSize,"titanium");
+array_fill_1d(global.spaceshipBufferMaterial,spaceshipMaxSize,"aerogel");
 global.spaceshipBufferRotation[0] = "";
 array_fill_1d(global.spaceshipBufferRotation,spaceshipMaxSize,0);
 global.spaceshipBufferFlip[0] = "";

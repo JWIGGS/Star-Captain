@@ -38,6 +38,10 @@ array_fill_1d(buttonHover,buttonAmount,false);
 buttonSelected[0] = false;
 array_fill_1d(buttonSelected,buttonAmount,false);
 
+barX = displayWidth;
+barY = displayHeight/2;
+barAngle = 90;
+
 
 
 

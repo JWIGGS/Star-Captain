@@ -138,6 +138,14 @@ with(spaceship){
 
 			cogTotal += r2;
 		}
+		
+		if(gridX[i]+1>width){
+			width = gridX[i]+1;	
+		}
+	
+		if(gridY[i]+1>height){
+			height = gridY[i]+1;	
+		}
 			
 
 	}

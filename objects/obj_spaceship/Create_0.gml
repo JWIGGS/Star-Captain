@@ -3,7 +3,9 @@
 player = false;
 active = true;
 
-length = spaceshipMaxSize
+length = spaceshipMaxSize;
+width = 0;
+height = 0;
 
 gridX[0] = 0;
 array_fill_1d(gridX,length,0);

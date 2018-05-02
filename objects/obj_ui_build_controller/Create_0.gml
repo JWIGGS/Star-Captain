@@ -14,6 +14,9 @@ gridPositionY = -1;
 
 length = spaceshipMaxSize;
 
+width = 0;
+height = 0;
+
 gridX[0] = 0;
 array_fill_1d(gridX,spaceshipMaxSize,0);
 gridY[0] = 0;
@@ -36,6 +39,31 @@ keymapType[0] = "";
 array_fill_1d(keymapType,spaceshipMaxSize,"");
 connectionMap[0] = false;
 array_fill_1d(connectionMap,spaceshipMaxSize,false);
+
+
+
+layerAmount = 3;
+
+layerButtonSprite[0] = spr_icon_hull;
+layerButtonSprite[1] = spr_icon_components;
+layerButtonSprite[2] = spr_icon_keyboard;
+
+layerButtonHotkey[0] = "1";
+layerButtonHotkey[1] = "2";
+layerButtonHotkey[2] = "3";
+
+
+layerButtonHover[0] = false;
+array_fill_1d(layerButtonHover,layerAmount,false);
+
+layerSelected = 0;
+
+layerBarX = 0;
+layerBarY = displayHeight/2;
+layerBarAngle = 270;
+
+hullSelected = 0;
+
 
 
 

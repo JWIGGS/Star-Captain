@@ -1,6 +1,7 @@
 /// @description inventory movement
 
 //inventory interaction
+var isHover = false;
 for(var i = 0; i<inventoryGridWidth; i++){
 	for(var j = 0; j<inventoryGridHeight;j++){
 		
@@ -10,6 +11,8 @@ for(var i = 0; i<inventoryGridWidth; i++){
 			
 			inventoryGridMouseHoverX = i;
 			inventoryGridMouseHoverY = j;
+			isHover = true;
+
 				
 			if(global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!=-1 and global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!=-1){
 				i = global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(inventoryGridMouseHoverX,inventoryGridMouseHoverY,inventoryGridWidth)];
@@ -157,3 +160,9 @@ for(var i = 0; i<inventoryGridWidth; i++){
 		
 	}
 }
+
+if(!isHover){
+	inventoryGridMouseHoverX = -1;
+	inventoryGridMouseHoverY = -1;
+}
+

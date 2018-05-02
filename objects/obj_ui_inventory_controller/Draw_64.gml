@@ -33,7 +33,7 @@ for(var i = 0; i<inventoryGridWidth; i++){
 		
 		
 		//up connection
-		if(j>1 and global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!= -1 and global.player.inventoryReferenceY[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!=-1){
+		if(j>0 and global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!= -1 and global.player.inventoryReferenceY[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!=-1){
 			if(global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)] = global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i,j-1,inventoryGridWidth)] and global.player.inventoryReferenceY[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)] = global.player.inventoryReferenceY[global.player.inventoryPageSelected,value_to_1d(i,j-1,inventoryGridWidth)]){
 				draw_sprite_ext(spr_gui_grid_overlay,inventoryGridHover[i,j],xPos+inventoryGridX+(i*inventoryGridSpacing),yPos+inventoryGridY+(j*inventoryGridSpacing),1,1,90,color,1);
 		
@@ -41,7 +41,7 @@ for(var i = 0; i<inventoryGridWidth; i++){
 		}
 		
 		//left connection
-		if(i>1 and global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!= -1 and global.player.inventoryReferenceY[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!=-1){
+		if(i>0 and global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!= -1 and global.player.inventoryReferenceY[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]!=-1){
 			if(global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)] = global.player.inventoryReferenceX[global.player.inventoryPageSelected,value_to_1d(i-1,j,inventoryGridWidth)] and global.player.inventoryReferenceY[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)] = global.player.inventoryReferenceY[global.player.inventoryPageSelected,value_to_1d(i-1,j,inventoryGridWidth)]){
 				draw_sprite_ext(spr_gui_grid_overlay,inventoryGridHover[i,j],xPos+inventoryGridX+(i*inventoryGridSpacing),yPos+inventoryGridY+(j*inventoryGridSpacing),1,1,180,color,1);
 		
@@ -72,14 +72,14 @@ for(var i = 0; i<inventoryGridWidth; i++){
 			}
 		
 			//up connection
-			if(j>1){
+			if(j>0){
 				if(inventoryGridMouseHover[i,j-1]){
 					draw_sprite_ext(spr_gui_grid_overlay,inventoryGridMouseHover[i,j],xPos+inventoryGridX+(i*inventoryGridSpacing),yPos+inventoryGridY+(j*inventoryGridSpacing),1,1,90,color,1);
 				}
 			}
 		
 			//left connection
-			if(i>1){
+			if(i>0){
 				if(inventoryGridMouseHover[i-1,j]){
 					draw_sprite_ext(spr_gui_grid_overlay,inventoryGridMouseHover[i,j],xPos+inventoryGridX+(i*inventoryGridSpacing),yPos+inventoryGridY+(j*inventoryGridSpacing),1,1,180,color,1);
 				}
@@ -116,11 +116,11 @@ for(var i = 0; i<inventoryGridWidth; i++){
 }
 
 //draw player item and amount
-if(global.player.inventoryMouseItem != "" and global.player.inventoryMouseAmount>0){
+if(global.player.inventoryMouseItem != "" and global.player.inventoryMouseAmount>0 and inventoryGridMouseHoverX!=-1 and inventoryGridMouseHoverY!=-1){
 	
 	for(var i = 0; i<map_data(global.itemData,itemDataWidth,global.player.inventoryMouseItem); i++){
 		for(var j = 0; j<map_data(global.itemData,itemDataHeight,global.player.inventoryMouseItem); j++){
-			//draw_sprite_ext(spr_gui_grid_mouse,0,gui_mouse_get_x()+(i*inventoryGridSpacing),gui_mouse_get_y()+(j*inventoryGridSpacing),1,1,0,color,.75);
+			draw_sprite_ext(spr_gui_grid_mouse,0,gui_mouse_get_x()+(i*inventoryGridSpacing),gui_mouse_get_y()+(j*inventoryGridSpacing),1,1,0,color,.5);
 
 		}	
 	}

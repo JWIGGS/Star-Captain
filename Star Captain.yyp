@@ -913,6 +913,25 @@
             }
         },
         {
+            "Key": "5093d627-1f10-4e5e-aff2-751d7cc41f69",
+            "Value": {
+                "id": "d00b5ada-7afb-4180-b812-df79be22a69c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_gui_grid_mouse\/spr_gui_grid_mouse.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "515e809b-a89d-43b3-acae-3df017e438f2",
             "Value": {
                 "id": "7d8934ce-499d-4ff3-8d4c-c6ded215361b",
@@ -1407,6 +1426,25 @@
             }
         },
         {
+            "Key": "8b23d124-f94a-49a2-92b6-6ee58ed50bb7",
+            "Value": {
+                "id": "eeed3d61-b321-43ee-98e0-d375269734d0",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_icon_components\/spr_icon_components.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8ba12cc9-9c4d-4843-974d-282103cca28c",
             "Value": {
                 "id": "15414a7f-eee1-4150-8db0-eee3492666cb",
@@ -1692,6 +1730,25 @@
             }
         },
         {
+            "Key": "a82959d7-0faa-4e0c-86fa-ffce98733103",
+            "Value": {
+                "id": "e71392f3-5a7f-40e9-b105-a7f11f71805a",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_icon_keyboard\/spr_icon_keyboard.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a83fa8fb-fbe5-487f-b00d-9df2f605b6ca",
             "Value": {
                 "id": "08c8152a-cb03-4d05-a283-8c155d7025d9",
@@ -1879,6 +1936,25 @@
                 ],
                 "resourcePath": "objects\/par_popup\/par_popup.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b6a486c6-def5-480d-a009-1419b974ca12",
+            "Value": {
+                "id": "fbb3d3f2-2635-4fec-bec2-7bcafdfd9f8b",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_icon_hull\/spr_icon_hull.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -18,8 +18,8 @@ array_fill_2d(inventoryGridHover,inventoryGridWidth,inventoryGridHeight,false);
 inventoryGridMouseHover[0,0] = false;
 array_fill_2d(inventoryGridMouseHover,inventoryGridWidth,inventoryGridHeight,false);
 
-inventoryGridMouseHoverX = 0;
-inventoryGridMouseHoverY = 0;
+inventoryGridMouseHoverX = -1;
+inventoryGridMouseHoverY = -1;
 
 pageHover[0] = false;
 array_fill_1d(pageHover,9,false);

@@ -5,13 +5,13 @@
 array_fill_2d(inventoryGridMouseHover,inventoryGridWidth,inventoryGridHeight,false);
 
 
-
-for(var m = 0; m<map_data(global.itemData,itemDataWidth,global.player.inventoryMouseItem); m++){
-	for(var n = 0; n<map_data(global.itemData,itemDataHeight,global.player.inventoryMouseItem); n++){
-		inventoryGridMouseHover[inventoryGridMouseHoverX+m,inventoryGridMouseHoverY+n] = true;
+if(inventoryGridMouseHoverX!=-1 and inventoryGridMouseHoverX!=-1){
+	for(var m = 0; m<map_data(global.itemData,itemDataWidth,global.player.inventoryMouseItem); m++){
+		for(var n = 0; n<map_data(global.itemData,itemDataHeight,global.player.inventoryMouseItem); n++){
+			inventoryGridMouseHover[inventoryGridMouseHoverX+m,inventoryGridMouseHoverY+n] = true;
+		}
 	}
 }
-
 
 
 //inventory

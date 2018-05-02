@@ -42,23 +42,19 @@ for(var i = 0; i<length; i++){
 
 }
 
-var maxWidth = 0;
-var maxHeight = 0;
+width = 0;
+height = 0;
 for(var i = 0; i<length; i++){
 	
-	if(gridX[i]+1>maxWidth){
-		maxWidth = gridX[i]+1;	
+	if(gridX[i]+1>width){
+		width = gridX[i]+1;	
 	}
 	
-	if(gridY[i]+1>maxHeight){
-		maxHeight = gridY[i]+1;	
+	if(gridY[i]+1>height){
+		height = gridY[i]+1;	
 	}
-	
 	
 }
-
-spaceshipOffsetX = ((maxWidth div 2)*32);
-spaceshipOffsetY = ((maxHeight div 2)*32);
 
 length = spaceshipMaxSize;
 
