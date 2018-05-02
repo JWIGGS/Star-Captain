@@ -7,14 +7,28 @@ var spaceship = instance_create_depth(xPos,yPos,0,obj_spaceship);
 
 with(spaceship){
 
-	width = global.spaceshipBufferWidth;
-	height = global.spaceshipBufferHeight;
+	length = global.spaceshipBufferLength;
+	
+	var maxWidth = 0;
+	var maxHeight = 0;
+	for(var i = 0; i<length; i++){
+	
+		if(gridX[i]+1>maxWidth){
+			maxWidth = gridX[i]+1;	
+		}
+	
+		if(gridY[i]+1>maxHeight){
+			maxHeight = gridY[i]+1;	
+		}
+	
+	
+	}
 	
 	player = argument2; ///@param player
 
 	//surface setup
-	var surfaceWidth = (width*32)+128;
-	var surfaceHeight = (height*32)+128;
+	var surfaceWidth = (maxWidth*32)+128;
+	var surfaceHeight = (maxHeight*32)+128;
 
 	var spaceshipSurface = surface_create(surfaceWidth, surfaceHeight);
 	surface_set_target(spaceshipSurface);
@@ -29,84 +43,65 @@ with(spaceship){
 	
 
 	//individual items	
-	for(var i = 0; i<width; i++){
-		for(var j = 0; j<height; j++){
+	for(var i = 0; i<length; i++){
 			
-			hullMap[i,j] = global.spaceshipBufferHull[i,j];
-			materialMap[i,j] = global.spaceshipBufferMaterial[i,j];
-			rotationMap[i,j] = global.spaceshipBufferRotation[i,j];
-			flipMap[i,j] = global.spaceshipBufferFlip[i,j];
-			componentMap[i,j] = global.spaceshipBufferComponent[i,j];
-			keymapA[i,j] = global.spaceshipBufferKeymapA[i,j];
-			keymapB[i,j] = global.spaceshipBufferKeymapB[i,j];
-			keymapType[i,j] = global.spaceshipBufferKeymapType[i,j];
 			
-			if(hullMap[i,j]!=""){
-				draw_sprite_ext(asset_get_index("spr_hull_"+hullMap[i,j]+"_"+materialMap[i,j]),0,16+(i*32)-16+(16*(1-((rotationMap[i,j] mod 180)/90)))+(16*(((rotationMap[i,j] mod 180)/90))),16+(j*32)-16+(16*(1-((rotationMap[i,j] mod 180)/90)))+(16*(((rotationMap[i,j] mod 180)/90))),flipMap[i,j],1,rotationMap[i,j],c_white,1);
-				
-				cogX += ((i*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i,j])*flipMap[i,j],map_data(global.hullData,hullDataCogY,hullMap[i,j]),0,0,rotationMap[i,j],"x"))*map_data(global.itemData,itemDataMass,materialMap[i,j])*map_data(global.hullData,hullDataSize,hullMap[i,j]);
-				cogY += ((j*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i,j])*flipMap[i,j],map_data(global.hullData,hullDataCogY,hullMap[i,j]),0,0,rotationMap[i,j],"y"))*map_data(global.itemData,itemDataMass,materialMap[i,j])*map_data(global.hullData,hullDataSize,hullMap[i,j]);
-				
-				cogTotal += map_data(global.itemData,itemDataMass,materialMap[i,j])*map_data(global.hullData,hullDataSize,hullMap[i,j]);
-				
-				//hull stats
-				mass += map_data(global.itemData,itemDataMass,materialMap[i,j])*map_data(global.hullData,hullDataSize,hullMap[i,j]);
-				armorMax += map_data(global.itemData,itemDataArmor,materialMap[i,j])*map_data(global.hullData,hullDataSize,hullMap[i,j]);
-				armorCurrent = armorMax;
-				shieldMax += map_data(global.itemData,itemDataShield,materialMap[i,j])*map_data(global.hullData,hullDataSize,hullMap[i,j]);
-				shieldCurrent =shieldMax;
-				energyMax += map_data(global.itemData,itemDataEnergyStored,materialMap[i,j])*map_data(global.hullData,hullDataSize,hullMap[i,j]);
-				energyCurrent =energyMax;
-				
-				
-			}
+		gridX[i] = global.spaceshipBufferGridX[i];
+		gridY[i] = global.spaceshipBufferGridY[i];
+		hullMap[i] = global.spaceshipBufferHull[i];
+		materialMap[i] = global.spaceshipBufferMaterial[i];
+		rotationMap[i] = global.spaceshipBufferRotation[i];
+		flipMap[i] = global.spaceshipBufferFlip[i];
+		componentMap[i] = global.spaceshipBufferComponent[i];
+		keymapA[i] = global.spaceshipBufferKeymapA[i];
+		keymapB[i] = global.spaceshipBufferKeymapB[i];
+		keymapType[i] = global.spaceshipBufferKeymapType[i];
 			
-			if(componentMap[i,j]!=""){
-				draw_sprite_ext(asset_get_index("spr_item_"+componentMap[i,j]),0,16+(i*32)-16+(16*(1-((rotationMap[i,j] mod 180)/90)))+(16*(((rotationMap[i,j] mod 180)/90))),16+(j*32)-16+(16*(1-((rotationMap[i,j] mod 180)/90)))+(16*(((rotationMap[i,j] mod 180)/90))),flipMap[i,j],1,rotationMap[i,j],c_white,1);
-			
-				cogX += ((i*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i,j])*flipMap[i,j],map_data(global.itemData,itemDataCogY,componentMap[i,j]),0,0,rotationMap[i,j],"x"))*map_data(global.itemData,itemDataMass,componentMap[i,j]);
-				cogY += ((j*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i,j])*flipMap[i,j],map_data(global.itemData,itemDataCogY,componentMap[i,j]),0,0,rotationMap[i,j],"y"))*map_data(global.itemData,itemDataMass,componentMap[i,j]);
+		if(hullMap[i]!=""){
+			draw_sprite_ext(asset_get_index("spr_hull_"+hullMap[i]+"_"+materialMap[i]),0,16+(gridX[i]*32)-16+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),16+(gridY[i]*32)-16+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),flipMap[i],1,rotationMap[i],c_white,1);
 				
-				cogTotal += map_data(global.itemData,itemDataMass,componentMap[i,j]);	
+			cogX += ((gridX[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i],"x"))*map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
+			cogY += ((gridY[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i],"y"))*map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
 				
-				//component stats
-				mass += map_data(global.itemData,itemDataMass,componentMap[i,j]);
-				armorMax += map_data(global.itemData,itemDataArmor,componentMap[i,j]);
-				armorCurrent = armorMax;
-				shieldMax += map_data(global.itemData,itemDataShield,componentMap[i,j]);
-				shieldCurrent =shieldMax;
-				energyMax += map_data(global.itemData,itemDataEnergyStored,componentMap[i,j]);
-				energyCurrent =energyMax;
-
-			}
-			
-			if(keymapA[i,j] != "" or keymapB[i,j] !=""){
-				var newControl = true;
+			cogTotal += map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
 				
-				for(var k = 0; k<array_length_1d(controlListX); k++){
-					if(controlListX[k]!=-1 and controlListY[k]!=-1){
-						if(keymapA[controlListX[k],controlListY[k]] = keymapA[i,j] and keymapB[controlListX[k],controlListY[k]] = keymapB[i,j]){
-							newControl = false;
-							break;
-						}
-					}
-				}
+			//hull stats
+			mass += map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
+			armorMax += map_data(global.itemData,itemDataArmor,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
+			armorCurrent = armorMax;
+			shieldMax += map_data(global.itemData,itemDataShield,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
+			shieldCurrent =shieldMax;
+			energyMax += map_data(global.itemData,itemDataEnergyStored,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
+			energyCurrent =energyMax;
 				
 				
-				if(newControl){
-					controlListX[array_length_1d(controlListX)] = i;
-					controlListY[array_length_1d(controlListY)] = j;
-				}
-			}
-
-			
-			
-			
-			
-			
-			
 		}
+			
+		if(componentMap[i]!=""){
+			draw_sprite_ext(asset_get_index("spr_item_"+componentMap[i]),0,16+(gridX[i]*32)-16+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),16+(gridY[i]*32)-16+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),flipMap[i],1,rotationMap[i],c_white,1);
+			
+			cogX += ((gridX[i]*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i])*flipMap[i],map_data(global.itemData,itemDataCogY,componentMap[i]),0,0,rotationMap[i],"x"))*map_data(global.itemData,itemDataMass,componentMap[i]);
+			cogY += ((gridX[i]*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i])*flipMap[i],map_data(global.itemData,itemDataCogY,componentMap[i]),0,0,rotationMap[i],"y"))*map_data(global.itemData,itemDataMass,componentMap[i]);
+				
+			cogTotal += map_data(global.itemData,itemDataMass,componentMap[i]);	
+				
+			//component stats
+			mass += map_data(global.itemData,itemDataMass,componentMap[i]);
+			armorMax += map_data(global.itemData,itemDataArmor,componentMap[i]);
+			armorCurrent = armorMax;
+			shieldMax += map_data(global.itemData,itemDataShield,componentMap[i]);
+			shieldCurrent =shieldMax;
+			energyMax += map_data(global.itemData,itemDataEnergyStored,componentMap[i]);
+			energyCurrent =energyMax;
+
+		}
+
+			
+			
+
 	}
+	
+	show_debug_message(gridX);
 	
 	surface_reset_target();
 	
@@ -122,33 +117,34 @@ with(spaceship){
 	var cogR = 0;
 	var cogTotal = 0;
 	
-	for(var i = 0; i<width; i++){
-		for(var j = 0; j<height; j++){
-			
-			if(hullMap[i,j]!=""){
-				
-				var r2 = power(point_distance(cogX,cogY,(i*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i,j])*flipMap[i,j],map_data(global.hullData,hullDataCogY,hullMap[i,j]),0,0,rotationMap[i,j],"x"),(j*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i,j])*flipMap[i,j],map_data(global.hullData,hullDataCogY,hullMap[i,j]),0,0,rotationMap[i,j],"y")),2);
-				
-				cogR += map_data(global.itemData,itemDataMass,materialMap[i,j])*map_data(global.hullData,hullDataSize,hullMap[i,j])*r2;
+	for(var i = 0; i<length; i++){
 
-				cogTotal += r2;
 			
-			}
-			
-			if(componentMap[i,j]!=""){
+		if(hullMap[i]!=""){
 				
-				var r2 = power(point_distance(cogX,cogY,(i*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i,j])*flipMap[i,j],map_data(global.itemData,itemDataCogY,componentMap[i,j]),0,0,rotationMap[i,j],"x"),(j*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i,j])*flipMap[i,j],map_data(global.itemData,itemDataCogY,componentMap[i,j]),0,0,rotationMap[i,j],"y")),2);
+			var r2 = power(point_distance(cogX,cogY,(gridX[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i],"x"),(gridY[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i],"y")),2);
 				
-				cogR += map_data(global.itemData,itemDataMass,componentMap[i,j])*r2;
+			cogR += map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i])*r2;
 
-				cogTotal += r2;
-			}
-			
+			cogTotal += r2;
 			
 		}
+			
+		if(componentMap[i]!=""){
+				
+			var r2 = power(point_distance(cogX,cogY,(gridX[i]*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i])*flipMap[i],map_data(global.itemData,itemDataCogY,componentMap[i]),0,0,rotationMap[i],"x"),(gridY[i]*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i])*flipMap[i],map_data(global.itemData,itemDataCogY,componentMap[i]),0,0,rotationMap[i],"y")),2);
+				
+			cogR += map_data(global.itemData,itemDataMass,componentMap[i])*r2;
+
+			cogTotal += r2;
+		}
+			
+
 	}
 	
-	inertia = cogR div cogTotal;
+	if(cogTotal!=0){
+		inertia = cogR div cogTotal;
+	}
 	
 	
 

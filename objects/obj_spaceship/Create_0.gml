@@ -3,30 +3,28 @@
 player = false;
 active = true;
 
-width = spaceshipMaxSize;
-height = spaceshipMaxSize;
+length = spaceshipMaxSize
 
-
-hullMap[0,0] = "";
-array_fill_2d(hullMap,width,height,"");
-materialMap[0,0] = "";
-array_fill_2d(materialMap,width,height,"");
-rotationMap[0,0] = 0;
-array_fill_2d(rotationMap,width,height,0);
-flipMap[0,0] = 1;
-array_fill_2d(flipMap,width,height,1);
-componentMap[0,0] = "";
-array_fill_2d(componentMap,width,height,"");
-keymapA[0,0] = "";
-array_fill_2d(keymapA,width,height,"");
-keymapB[0,0] = "";
-array_fill_2d(keymapB,width,height,"");
-keymapType[0,0] = "";
-array_fill_2d(keymapType,width,height,"");
-
-controlListX[0] = -1;
-controlListY[0] = -1;
-
+gridX[0] = 0;
+array_fill_1d(gridX,length,0);
+gridY[0] = 0;
+array_fill_1d(gridY,length,0);
+hullMap[0] = "";
+array_fill_1d(hullMap,length,"");
+materialMap[0] = "";
+array_fill_1d(materialMap,length,"");
+rotationMap[0] = 0;
+array_fill_1d(rotationMap,length,0);
+flipMap[0] = 1;
+array_fill_1d(flipMap,length,1);
+componentMap[0] = "";
+array_fill_1d(componentMap,length,"");
+keymapA[0] = "";
+array_fill_1d(keymapA,length,"");
+keymapB[0] = "";
+array_fill_1d(keymapB,length,"");
+keymapType[0] = "";
+array_fill_1d(keymapType,length,"");
 
 
 
@@ -53,16 +51,12 @@ energyCurrent = 0;
 
 //control
 
-keyA[0,0] = false;
-array_fill_2d(keyA,width,height,false);
-keyB[0,0] = false;
-array_fill_2d(keyB,width,height,false);
-activateMap[0,0] = false;
-array_fill_2d(activateMap,width,height,false);
-
-
-rof[0,0] = false;
-array_fill_2d(rof,width,height,0);
+keyA[0] = false;
+array_fill_1d(keyA,length,false);
+keyB[0] = false;
+array_fill_1d(keyB,length,false);
+activateMap[0] = false;
+array_fill_1d(activateMap,length,false);
 
 
 //inventory

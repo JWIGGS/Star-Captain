@@ -1,54 +1,66 @@
 /// @description load spaceship from player
 
-width = global.player.width;
-height = global.player.height;
+length = global.player.length;
 
-gridOffsetX = (spaceshipMaxSize div 2)-(width div 2)-1;
-gridOffsetY = (spaceshipMaxSize div 2)-(height div 2)-1;
-
-spaceshipOffsetX = (gridOffsetX*32) + ((width div 2)*32);
-spaceshipOffsetY = (gridOffsetY*32) + ((height div 2)*32);
-
-
-hullMap[0,0] = "";
-array_fill_2d(hullMap,width,height,"");
-materialMap[0,0] = "";
-array_fill_2d(materialMap,width,height,"");
-rotationMap[0,0] = 0;
-array_fill_2d(rotationMap,width,height,0);
-flipMap[0,0] = 1;
-array_fill_2d(flipMap,width,height,1);
-componentMap[0,0] = "";
-array_fill_2d(componentMap,width,height,"");
-keymapA[0,0] = "";
-array_fill_2d(keymapA,width,height,"");
-keymapB[0,0] = "";
-array_fill_2d(keymapB,width,height,"");
-keymapType[0,0] = "";
-array_fill_2d(keymapType,width,height,"");
-connectionMap[0,0] = false;
-array_fill_2d(connectionMap,width,height,false);
+gridX[0] = 0;
+array_fill_1d(gridX,spaceshipMaxSize,0);
+gridY[0] = 0;
+array_fill_1d(gridY,spaceshipMaxSize,0);
+hullMap[0] = "";
+array_fill_1d(hullMap,spaceshipMaxSize,"");
+materialMap[0] = "";
+array_fill_1d(materialMap,spaceshipMaxSize,"");
+rotationMap[0] = 0;
+array_fill_1d(rotationMap,spaceshipMaxSize,0);
+flipMap[0] = 1;
+array_fill_1d(flipMap,spaceshipMaxSize,1);
+componentMap[0] = "";
+array_fill_1d(componentMap,spaceshipMaxSize,"");
+keymapA[0] = "";
+array_fill_1d(keymapA,spaceshipMaxSize,"");
+keymapB[0] = "";
+array_fill_1d(keymapB,spaceshipMaxSize,"");
+keymapType[0] = "";
+array_fill_1d(keymapType,spaceshipMaxSize,"");
+connectionMap[0] = false;
+array_fill_1d(connectionMap,spaceshipMaxSize,false);
 
 
-for(var i = 0; i<width; i++){
-	for(var j = 0; j<height; j++){
-		
-		hullMap[i+gridOffsetX,j+gridOffsetY] = global.player.hullMap[i,j];
-		materialMap[i+gridOffsetX,j+gridOffsetY] = global.player.materialMap[i,j];
-		rotationMap[i+gridOffsetX,j+gridOffsetY] = global.player.rotationMap[i,j];
-		flipMap[i+gridOffsetX,j+gridOffsetY] = global.player.flipMap[i,j];
-		componentMap[i+gridOffsetX,j+gridOffsetY] = global.player.componentMap[i,j];
-		keymapA[i+gridOffsetX,j+gridOffsetY] = global.player.keymapA[i,j];
-		keymapB[i+gridOffsetX,j+gridOffsetY] = global.player.keymapB[i,j];
-		keymapType[i+gridOffsetX,j+gridOffsetY] = global.player.keymapType[i,j];
+for(var i = 0; i<length; i++){
 
-	
-	
-	}
+	gridX[i] = global.player.gridX[i];
+	gridY[i] = global.player.gridY[i];
+	hullMap[i] = global.player.hullMap[i];
+	materialMap[i] = global.player.materialMap[i];
+	rotationMap[i] = global.player.rotationMap[i];
+	flipMap[i] = global.player.flipMap[i];
+	componentMap[i] = global.player.componentMap[i];
+	keymapA[i] = global.player.keymapA[i];
+	keymapB[i] = global.player.keymapB[i];
+	keymapType[i] = global.player.keymapType[i];
+
+
 }
 
-width = spaceshipMaxSize;
-height = spaceshipMaxSize;
+var maxWidth = 0;
+var maxHeight = 0;
+for(var i = 0; i<length; i++){
+	
+	if(gridX[i]+1>maxWidth){
+		maxWidth = gridX[i]+1;	
+	}
+	
+	if(gridY[i]+1>maxHeight){
+		maxHeight = gridY[i]+1;	
+	}
+	
+	
+}
+
+spaceshipOffsetX = ((maxWidth div 2)*32);
+spaceshipOffsetY = ((maxHeight div 2)*32);
+
+length = spaceshipMaxSize;
 
 
 //update connections

@@ -19,16 +19,15 @@ with(par_popup){
 var distance = -1;
 
 with(global.player){
-	for(var i = -1; i<width+1; i++){
-		for(var j = -1; j<height+1; j++){
-			var px = rotate_around_point(16+(i*32),16+(j*32),sprite_xoffset,sprite_yoffset,dir,"x");
-			var py = rotate_around_point(16+(i*32),16+(j*32),sprite_xoffset,sprite_yoffset,dir,"y");
+	for(var i = 0; i<length; i++){
+
+		var px = rotate_around_point(16+(gridX[i]*32),16+(gridY[i]*32),sprite_xoffset,sprite_yoffset,dir,"x");
+		var py = rotate_around_point(16+(gridX[i]*32),16+(gridY[i]*32),sprite_xoffset,sprite_yoffset,dir,"y");
 		
-			if(distance = -1 or point_distance(mouse_x-x+sprite_xoffset,mouse_y-y+sprite_yoffset,px,py)<distance){
-				other.matrixMouseX = i;
-				other.matrixMouseY = j;
-				distance =  point_distance(mouse_x-x+sprite_xoffset,mouse_y-y+sprite_yoffset,px,py);
-			}
+		if(distance = -1 or point_distance(mouse_x-x+sprite_xoffset,mouse_y-y+sprite_yoffset,px,py)<distance){
+			other.matrixMouseX = gridX[i];
+			other.matrixMouseY = gridY[i];
+			distance =  point_distance(mouse_x-x+sprite_xoffset,mouse_y-y+sprite_yoffset,px,py);
 		}
 	}
 	
