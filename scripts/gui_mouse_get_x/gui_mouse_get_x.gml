@@ -1,0 +1,1 @@
+return window_mouse_get_x()*(displayWidth/window_get_width());

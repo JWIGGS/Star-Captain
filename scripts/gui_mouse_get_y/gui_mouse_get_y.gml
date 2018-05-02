@@ -1,0 +1,1 @@
+return window_mouse_get_y()*(displayHeight/window_get_height());
