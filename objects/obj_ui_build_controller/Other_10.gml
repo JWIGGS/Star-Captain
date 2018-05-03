@@ -56,8 +56,6 @@ for(var i = 0; i<length; i++){
 	
 }
 
-length = spaceshipMaxSize;
-
 
 //update connections
 event_user(1);

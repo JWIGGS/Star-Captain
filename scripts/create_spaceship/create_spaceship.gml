@@ -29,6 +29,7 @@ with(spaceship){
 	//surface setup
 	var surfaceWidth = (maxWidth*32)+128;
 	var surfaceHeight = (maxHeight*32)+128;
+	
 
 	var spaceshipSurface = surface_create(surfaceWidth, surfaceHeight);
 	surface_set_target(spaceshipSurface);
@@ -58,7 +59,7 @@ with(spaceship){
 		keymapType[i] = global.spaceshipBufferKeymapType[i];
 			
 		if(hullMap[i]!=""){
-			draw_sprite_ext(asset_get_index("spr_hull_"+hullMap[i]+"_"+materialMap[i]),0,16+(gridX[i]*32)-16+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),16+(gridY[i]*32)-16+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),flipMap[i],1,rotationMap[i],c_white,1);
+			draw_sprite_ext(asset_get_index("spr_hull_"+hullMap[i]+"_"+materialMap[i]),0,(gridX[i]*32)+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),(gridY[i]*32)+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),flipMap[i],1,rotationMap[i],c_white,1);
 				
 			cogX += ((gridX[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i],"x"))*map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
 			cogY += ((gridY[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i],"y"))*map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
@@ -78,7 +79,8 @@ with(spaceship){
 		}
 			
 		if(componentMap[i]!=""){
-			draw_sprite_ext(asset_get_index("spr_item_"+componentMap[i]),0,16+(gridX[i]*32)-16+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),16+(gridY[i]*32)-16+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),flipMap[i],1,rotationMap[i],c_white,1);
+
+			draw_sprite_ext(asset_get_index("spr_item_"+componentMap[i]),0,(gridX[i]*32)+(16*map_data(global.itemData,itemDataWidth,componentMap[i])*(1-((rotationMap[i] mod 180)/90)))+(16*map_data(global.itemData,itemDataHeight,componentMap[i])*(((rotationMap[i] mod 180)/90)))+boolean_return(rotationMap[i] =180,32*(1-map_data(global.itemData,itemDataWidth,componentMap[i])),0)+boolean_return(rotationMap[i]=270,32*(1-map_data(global.itemData,itemDataHeight,componentMap[i])),0),(gridY[i]*32)+(16*map_data(global.itemData,itemDataHeight,componentMap[i])*(1-((rotationMap[i] mod 180)/90)))+(16*map_data(global.itemData,itemDataWidth,componentMap[i])*(((rotationMap[i] mod 180)/90)))+boolean_return(rotationMap[i]=90,32*(1-map_data(global.itemData,itemDataWidth,componentMap[i])),0)+boolean_return(rotationMap[i]=180,32*(1-map_data(global.itemData,itemDataHeight,componentMap[i])),0),flipMap[i],1,rotationMap[i],c_white,1);
 			
 			cogX += ((gridX[i]*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i])*flipMap[i],map_data(global.itemData,itemDataCogY,componentMap[i]),0,0,rotationMap[i],"x"))*map_data(global.itemData,itemDataMass,componentMap[i]);
 			cogY += ((gridX[i]*32)+16+rotate_around_point(map_data(global.itemData,itemDataCogX,componentMap[i])*flipMap[i],map_data(global.itemData,itemDataCogY,componentMap[i]),0,0,rotationMap[i],"y"))*map_data(global.itemData,itemDataMass,componentMap[i]);

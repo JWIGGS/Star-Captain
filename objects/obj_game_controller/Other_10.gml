@@ -681,8 +681,8 @@ ds_map_add(global.itemConnectionLeft,object,false);
 ds_map_add(global.itemConnectionDown,object,false);
 
 
-var object = "rocket_single";
-global.item[15] = "rocket_single";
+var object = "rocket_basic";
+global.item[15] = "rocket_basic";
 ds_map_add(global.itemName,object,"Basic Rocket");
 ds_map_add(global.itemDescription,object,"");
 ds_map_add(global.itemRole,object,"attachment");
@@ -693,7 +693,7 @@ ds_map_add(global.itemShield,object,0.0);
 ds_map_add(global.itemQPU,object,20.0);
 ds_map_add(global.itemThrust,object,75.0);
 ds_map_add(global.itemCogX,object,0.0);
-ds_map_add(global.itemCogY,object,-12.0);
+ds_map_add(global.itemCogY,object,0.0);
 ds_map_add(global.itemWidth,object,1.0);
 ds_map_add(global.itemHeight,object,2.0);
 ds_map_add(global.itemEnergyGenerated,object,0.0);
@@ -710,4 +710,62 @@ ds_map_add(global.itemConnectionLeft,object,false);
 ds_map_add(global.itemConnectionDown,object,false);
 
 
-#macro itemAmount 16
+var object = "rocket_advanced";
+global.item[16] = "rocket_advanced";
+ds_map_add(global.itemName,object,"Advanced Rocket");
+ds_map_add(global.itemDescription,object,"");
+ds_map_add(global.itemRole,object,"attachment");
+ds_map_add(global.itemType,object,"propulsion");
+ds_map_add(global.itemMass,object,40.0);
+ds_map_add(global.itemArmor,object,20.0);
+ds_map_add(global.itemShield,object,0.0);
+ds_map_add(global.itemQPU,object,20.0);
+ds_map_add(global.itemThrust,object,75.0);
+ds_map_add(global.itemCogX,object,0.0);
+ds_map_add(global.itemCogY,object,0.0);
+ds_map_add(global.itemWidth,object,2.0);
+ds_map_add(global.itemHeight,object,1.0);
+ds_map_add(global.itemEnergyGenerated,object,0.0);
+ds_map_add(global.itemEnergyConsumption,object,3.0);
+ds_map_add(global.itemEnergyStored,object,0.0);
+ds_map_add(global.itemRateOfFire,object,0.0);
+ds_map_add(global.itemWeaponDamage,object,0.0);
+ds_map_add(global.itemWeaponDeviation,object,0.0);
+ds_map_add(global.itemWeaponVolley,object,0.0);
+ds_map_add(global.itemWeaponVolleyDelay,object,0.0);
+ds_map_add(global.itemConnectionRight,object,false);
+ds_map_add(global.itemConnectionUp,object,true);
+ds_map_add(global.itemConnectionLeft,object,false);
+ds_map_add(global.itemConnectionDown,object,false);
+
+
+var object = "rocket_expert";
+global.item[17] = "rocket_expert";
+ds_map_add(global.itemName,object,"Expert Rocket");
+ds_map_add(global.itemDescription,object,"");
+ds_map_add(global.itemRole,object,"attachment");
+ds_map_add(global.itemType,object,"propulsion");
+ds_map_add(global.itemMass,object,40.0);
+ds_map_add(global.itemArmor,object,20.0);
+ds_map_add(global.itemShield,object,0.0);
+ds_map_add(global.itemQPU,object,20.0);
+ds_map_add(global.itemThrust,object,75.0);
+ds_map_add(global.itemCogX,object,0.0);
+ds_map_add(global.itemCogY,object,0.0);
+ds_map_add(global.itemWidth,object,2.0);
+ds_map_add(global.itemHeight,object,2.0);
+ds_map_add(global.itemEnergyGenerated,object,0.0);
+ds_map_add(global.itemEnergyConsumption,object,3.0);
+ds_map_add(global.itemEnergyStored,object,0.0);
+ds_map_add(global.itemRateOfFire,object,0.0);
+ds_map_add(global.itemWeaponDamage,object,0.0);
+ds_map_add(global.itemWeaponDeviation,object,0.0);
+ds_map_add(global.itemWeaponVolley,object,0.0);
+ds_map_add(global.itemWeaponVolleyDelay,object,0.0);
+ds_map_add(global.itemConnectionRight,object,false);
+ds_map_add(global.itemConnectionUp,object,true);
+ds_map_add(global.itemConnectionLeft,object,false);
+ds_map_add(global.itemConnectionDown,object,false);
+
+
+#macro itemAmount 18

@@ -54,8 +54,9 @@ global.spaceshipBufferHull[3] = "edge";
 global.spaceshipBufferFlip[3] = -1;
 
 global.spaceshipBufferGridX[4] = 0;
-global.spaceshipBufferGridY[4] = 2;
-global.spaceshipBufferComponent[4] = "thruster_basic";
+global.spaceshipBufferGridY[4] = 1;
+global.spaceshipBufferComponent[4] = "rocket_expert";
+global.spaceshipBufferRotation[4] = 270;
 global.spaceshipBufferFlip[4] = -1;
 global.spaceshipBufferKeymapA[4] = "D";
 
@@ -66,7 +67,7 @@ global.spaceshipBufferRotation[5] = 180;
 
 global.spaceshipBufferGridX[6] = 2;
 global.spaceshipBufferGridY[6] = 2;
-global.spaceshipBufferComponent[6] = "engine_basic";
+global.spaceshipBufferComponent[6] = "rocket_basic";
 global.spaceshipBufferKeymapA[6] = "W";
 
 global.spaceshipBufferGridX[7] = 3;
@@ -77,8 +78,11 @@ global.spaceshipBufferRotation[7] = 90;
 
 global.spaceshipBufferGridX[8] = 4;
 global.spaceshipBufferGridY[8] = 2;
-global.spaceshipBufferComponent[8] = "thruster_basic";
+global.spaceshipBufferComponent[8] = "rocket_expert";
 global.spaceshipBufferKeymapA[8] = "A";
+global.spaceshipBufferRotation[8] = 90;
+
+
 
 global.spaceshipBufferLength = 9;
 

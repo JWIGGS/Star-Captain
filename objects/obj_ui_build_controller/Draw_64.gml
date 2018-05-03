@@ -14,4 +14,5 @@ for(var i = 0; i<3; i++){
 	draw_text(draw_bar_point_x(layerBarX,layerBarY,layerBarAngle,i,layerAmount)+20,draw_bar_point_y(layerBarX,layerBarY,layerBarAngle,i,layerAmount)+16,layerButtonHotkey[i]);
 }
 
+	
 

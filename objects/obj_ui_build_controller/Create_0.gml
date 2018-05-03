@@ -8,8 +8,8 @@ yPos = 64;
 matrixMouseX = -1;
 matrixMouseY = -1;
 
-gridPositionX = -1;
-gridPositionY = -1;
+gridMouseX = -1;
+gridMouseY = -1;
 
 
 length = spaceshipMaxSize;
@@ -63,6 +63,9 @@ layerBarY = displayHeight/2;
 layerBarAngle = 270;
 
 hullSelected = 0;
+rotationSelected = 0;
+flipSelected = 1;
+placeable = false;
 
 
 
