@@ -1160,6 +1160,25 @@
             }
         },
         {
+            "Key": "5dd3bc0e-4816-4883-9742-b34809ffce6c",
+            "Value": {
+                "id": "c7a88923-95e4-47fb-9942-03d0181c5b49",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "notes\/TODO.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "668092f7-e79c-41f7-8bb8-f82ac2d689d5",
             "Value": {
                 "id": "9326b68e-8357-482a-ae8d-9f24cbd21e00",

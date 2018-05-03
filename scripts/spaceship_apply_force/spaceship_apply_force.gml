@@ -10,22 +10,23 @@ spdY += lengthdir_y((forceAmountTranslational)/(mass),forceAngle+dir);
 
 switch(forceAngle){
 	case 0:
-		spdAngle += (forcePositionX-sprite_xoffset)*(forceAmountRotational/mass);
+		spdAngle += (forcePositionX)*(forceAmountRotational/mass);
 		break;
 	
 	case 90:
-		spdAngle -= (forcePositionY-sprite_yoffset)*(forceAmountRotational/mass);
+		spdAngle -= (forcePositionY)*(forceAmountRotational/mass);
 		break;
 	
 	case 180:
-		spdAngle -= (forcePositionX-sprite_xoffset)*(forceAmountRotational/mass);
+		spdAngle -= (forcePositionX)*(forceAmountRotational/mass);
 		break;
 	
 	case 270:
-		spdAngle += (forcePositionY-sprite_yoffset)*(forceAmountRotational/mass);
+		spdAngle += (forcePositionY)*(forceAmountRotational/mass);
 		break;
 	
 	
 }
+
 
 

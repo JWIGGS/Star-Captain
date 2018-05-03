@@ -163,8 +163,6 @@ if(matrixMouseX!=-2 and matrixMouseY!=-2){
 //keyboard hotkeys
 if(keyboard_check_pressed(ord("R"))){
 	rotationSelected = wrap(rotationSelected+90,0,360);
-	
-	show_debug_message(rotationSelected);
 }
 
 if(keyboard_check_pressed(ord("F"))){

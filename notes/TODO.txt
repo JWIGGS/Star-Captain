@@ -1,0 +1,10 @@
+BUGS:
+
+make spaceship sprite larger than width and height
+
+spaceship radius of inertia for large blocks
+
+
+Todo:
+
+Inventory Hover barrier with shading by uring subimage instad of rotated sprite
