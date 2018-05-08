@@ -9,6 +9,22 @@ with(spaceship){
 
 	length = global.spaceshipBufferLength;
 	
+	for(var i = 0; i<length; i++){
+			
+			
+		gridX[i] = global.spaceshipBufferGridX[i];
+		gridY[i] = global.spaceshipBufferGridY[i];
+		hullMap[i] = global.spaceshipBufferHull[i];
+		materialMap[i] = global.spaceshipBufferMaterial[i];
+		rotationMap[i] = global.spaceshipBufferRotation[i];
+		flipMap[i] = global.spaceshipBufferFlip[i];
+		componentMap[i] = global.spaceshipBufferComponent[i];
+		keymapA[i] = global.spaceshipBufferKeymapA[i];
+		keymapB[i] = global.spaceshipBufferKeymapB[i];
+		keymapType[i] = global.spaceshipBufferKeymapType[i];
+		
+	}
+	
 	var maxWidth = 0;
 	var maxHeight = 0;
 	for(var i = 0; i<length; i++){
@@ -23,12 +39,11 @@ with(spaceship){
 	
 	
 	}
-	
 	player = argument2; ///@param player
 
 	//surface setup
-	var surfaceWidth = (maxWidth*32)+128;
-	var surfaceHeight = (maxHeight*32)+128;
+	var surfaceWidth = (maxWidth*32)+(spaceshipSpriteOffset*2);
+	var surfaceHeight = (maxHeight*32)+(spaceshipSpriteOffset*2);
 	
 
 	var spaceshipSurface = surface_create(surfaceWidth, surfaceHeight);
@@ -46,20 +61,9 @@ with(spaceship){
 	//individual items	
 	for(var i = 0; i<length; i++){
 			
-			
-		gridX[i] = global.spaceshipBufferGridX[i];
-		gridY[i] = global.spaceshipBufferGridY[i];
-		hullMap[i] = global.spaceshipBufferHull[i];
-		materialMap[i] = global.spaceshipBufferMaterial[i];
-		rotationMap[i] = global.spaceshipBufferRotation[i];
-		flipMap[i] = global.spaceshipBufferFlip[i];
-		componentMap[i] = global.spaceshipBufferComponent[i];
-		keymapA[i] = global.spaceshipBufferKeymapA[i];
-		keymapB[i] = global.spaceshipBufferKeymapB[i];
-		keymapType[i] = global.spaceshipBufferKeymapType[i];
-			
 		if(hullMap[i]!=""){
-			draw_sprite_ext(asset_get_index("spr_hull_"+hullMap[i]+"_"+materialMap[i]),0,(gridX[i]*32)+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),(gridY[i]*32)+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),flipMap[i],1,rotationMap[i],c_white,1);
+			
+			draw_sprite_ext(asset_get_index("spr_hull_"+materialMap[i]+"_"+hullMap[i]),0,(gridX[i]*32)+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),(gridY[i]*32)+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),flipMap[i],1,rotationMap[i],c_white,1);
 				
 
 			cogX += ((gridX[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i],"x"))*map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);

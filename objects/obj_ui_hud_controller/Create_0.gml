@@ -2,6 +2,8 @@
 
 depth --;
 
+
+//menu button array
 buttonAmount = 6;
 
 buttonSprite[0] = spr_icon_craft;
@@ -19,12 +21,6 @@ buttonObject[4] = noone;
 buttonObject[5] = noone;
 
 
-for(var i = 0; i<buttonAmount; i++){
-	if(buttonObject[i]!=noone){
-		instance_create_depth(x,y,depth,buttonObject[i]);
-	}
-}
-
 buttonHotkey[0] = "C";
 buttonHotkey[1] = "B";
 buttonHotkey[2] = "Q";
@@ -38,9 +34,19 @@ array_fill_1d(buttonHover,buttonAmount,false);
 buttonSelected[0] = false;
 array_fill_1d(buttonSelected,buttonAmount,false);
 
+
+//bar
 barX = displayWidth;
 barY = displayHeight/2;
 barAngle = 90;
+
+
+//create menu objects
+for(var i = 0; i<buttonAmount; i++){
+	if(buttonObject[i]!=noone){
+		instance_create_depth(x,y,depth,buttonObject[i]);
+	}
+}
 
 
 

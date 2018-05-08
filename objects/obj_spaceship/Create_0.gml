@@ -1,12 +1,16 @@
 /// @description initialize spaceship
 
+//state
 player = false;
 active = true;
 
+//size
 length = spaceshipMaxSize;
 width = 0;
 height = 0;
 
+
+//maps
 gridX[0] = 0;
 array_fill_1d(gridX,length,0);
 gridY[0] = 0;
@@ -41,7 +45,6 @@ spdYPrev = 0;
 spdAngle = 0;
 dir = 90;
 
-
 //stats
 mass = 0;
 armorMax = 0;
@@ -51,8 +54,7 @@ shieldCurrent = 0;
 energyMax = 0;
 energyCurrent = 0;
 
-//control
-
+//control presses
 keyA[0] = false;
 array_fill_1d(keyA,length,false);
 keyB[0] = false;

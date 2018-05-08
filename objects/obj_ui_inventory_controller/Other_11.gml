@@ -1,7 +1,6 @@
 /// @description superficial hover 
 
 //mouse hover
-
 array_fill_2d(inventoryGridMouseHover,inventoryGridWidth,inventoryGridHeight,false);
 
 

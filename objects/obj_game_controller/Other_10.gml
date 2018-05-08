@@ -74,8 +74,8 @@ ds_map_add(global.hullCogX,object,6.0);
 ds_map_add(global.hullCogY,object,6.0);
 
 
-var object = "nose_curved";
-global.hull[2] = "nose_curved";
+var object = "nose";
+global.hull[2] = "nose";
 ds_map_add(global.hullConnectionRight,object,false);
 ds_map_add(global.hullConnectionUp,object,false);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -85,7 +85,51 @@ ds_map_add(global.hullCogX,object,0.0);
 ds_map_add(global.hullCogY,object,2.0);
 
 
-#macro hullAmount 3
+var object = "half";
+global.hull[3] = "half";
+ds_map_add(global.hullConnectionRight,object,true);
+ds_map_add(global.hullConnectionUp,object,true);
+ds_map_add(global.hullConnectionLeft,object,false);
+ds_map_add(global.hullConnectionDown,object,true);
+ds_map_add(global.hullSize,object,0.6);
+ds_map_add(global.hullCogX,object,6.0);
+ds_map_add(global.hullCogY,object,0.0);
+
+
+var object = "round";
+global.hull[4] = "round";
+ds_map_add(global.hullConnectionRight,object,true);
+ds_map_add(global.hullConnectionUp,object,false);
+ds_map_add(global.hullConnectionLeft,object,false);
+ds_map_add(global.hullConnectionDown,object,true);
+ds_map_add(global.hullSize,object,0.8);
+ds_map_add(global.hullCogX,object,2.0);
+ds_map_add(global.hullCogY,object,2.0);
+
+
+var object = "edge_half";
+global.hull[5] = "edge_half";
+ds_map_add(global.hullConnectionRight,object,true);
+ds_map_add(global.hullConnectionUp,object,false);
+ds_map_add(global.hullConnectionLeft,object,false);
+ds_map_add(global.hullConnectionDown,object,true);
+ds_map_add(global.hullSize,object,0.3);
+ds_map_add(global.hullCogX,object,6.0);
+ds_map_add(global.hullCogY,object,2.0);
+
+
+var object = "round_half";
+global.hull[6] = "round_half";
+ds_map_add(global.hullConnectionRight,object,true);
+ds_map_add(global.hullConnectionUp,object,false);
+ds_map_add(global.hullConnectionLeft,object,false);
+ds_map_add(global.hullConnectionDown,object,true);
+ds_map_add(global.hullSize,object,0.4);
+ds_map_add(global.hullCogX,object,6.0);
+ds_map_add(global.hullCogY,object,2.0);
+
+
+#macro hullAmount 7
 
 
 /////////////////////////
@@ -246,8 +290,37 @@ global.itemDataString[itemDataConnectionDown] = string_space_caps("ConnectionDow
 
 
 
+var object = "_";
+global.item[0] = "_";
+ds_map_add(global.itemName,object,"");
+ds_map_add(global.itemDescription,object,"");
+ds_map_add(global.itemRole,object,"attachment");
+ds_map_add(global.itemType,object,"");
+ds_map_add(global.itemMass,object,0.0);
+ds_map_add(global.itemArmor,object,0.0);
+ds_map_add(global.itemShield,object,0.0);
+ds_map_add(global.itemQPU,object,0.0);
+ds_map_add(global.itemThrust,object,0.0);
+ds_map_add(global.itemCogX,object,0.0);
+ds_map_add(global.itemCogY,object,0.0);
+ds_map_add(global.itemWidth,object,1.0);
+ds_map_add(global.itemHeight,object,1.0);
+ds_map_add(global.itemEnergyGenerated,object,0.0);
+ds_map_add(global.itemEnergyConsumption,object,0.0);
+ds_map_add(global.itemEnergyStored,object,0.0);
+ds_map_add(global.itemRateOfFire,object,0.0);
+ds_map_add(global.itemWeaponDamage,object,0.0);
+ds_map_add(global.itemWeaponDeviation,object,0.0);
+ds_map_add(global.itemWeaponVolley,object,0.0);
+ds_map_add(global.itemWeaponVolleyDelay,object,0.0);
+ds_map_add(global.itemConnectionRight,object,false);
+ds_map_add(global.itemConnectionUp,object,false);
+ds_map_add(global.itemConnectionLeft,object,false);
+ds_map_add(global.itemConnectionDown,object,false);
+
+
 var object = "iron";
-global.item[0] = "iron";
+global.item[1] = "iron";
 ds_map_add(global.itemName,object,"Iron");
 ds_map_add(global.itemDescription,object,"Basic and Heavy");
 ds_map_add(global.itemRole,object,"material");
@@ -276,7 +349,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "aluminum";
-global.item[1] = "aluminum";
+global.item[2] = "aluminum";
 ds_map_add(global.itemName,object,"Aluminum");
 ds_map_add(global.itemDescription,object,"Light, but not durable");
 ds_map_add(global.itemRole,object,"material");
@@ -305,7 +378,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "titanium";
-global.item[2] = "titanium";
+global.item[3] = "titanium";
 ds_map_add(global.itemName,object,"Titanium");
 ds_map_add(global.itemDescription,object,"Strong and lightweight");
 ds_map_add(global.itemRole,object,"material");
@@ -334,7 +407,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "nanonium";
-global.item[3] = "nanonium";
+global.item[4] = "nanonium";
 ds_map_add(global.itemName,object,"Nanonium");
 ds_map_add(global.itemDescription,object,"Heavy, but good for electronics");
 ds_map_add(global.itemRole,object,"material");
@@ -363,7 +436,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "aerogel";
-global.item[4] = "aerogel";
+global.item[5] = "aerogel";
 ds_map_add(global.itemName,object,"Aerogel");
 ds_map_add(global.itemDescription,object,"Heavy, but incredibly strong");
 ds_map_add(global.itemRole,object,"material");
@@ -392,7 +465,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "starlite";
-global.item[5] = "starlite";
+global.item[6] = "starlite";
 ds_map_add(global.itemName,object,"Starlite");
 ds_map_add(global.itemDescription,object,"Heavy, but great with energy");
 ds_map_add(global.itemRole,object,"material");
@@ -421,7 +494,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "armor";
-global.item[6] = "armor";
+global.item[7] = "armor";
 ds_map_add(global.itemName,object,"Armor");
 ds_map_add(global.itemDescription,object,"Reinforces your blocks");
 ds_map_add(global.itemRole,object,"module");
@@ -450,7 +523,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "battery";
-global.item[7] = "battery";
+global.item[8] = "battery";
 ds_map_add(global.itemName,object,"Battery");
 ds_map_add(global.itemDescription,object,"Stores energy");
 ds_map_add(global.itemRole,object,"module");
@@ -479,7 +552,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "cockpit";
-global.item[8] = "cockpit";
+global.item[9] = "cockpit";
 ds_map_add(global.itemName,object,"Cockpit");
 ds_map_add(global.itemDescription,object,"Core of your ship");
 ds_map_add(global.itemRole,object,"module");
@@ -508,7 +581,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "processor";
-global.item[9] = "processor";
+global.item[10] = "processor";
 ds_map_add(global.itemName,object,"Processor");
 ds_map_add(global.itemDescription,object,"Increases QPU");
 ds_map_add(global.itemRole,object,"module");
@@ -537,7 +610,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "reactor";
-global.item[10] = "reactor";
+global.item[11] = "reactor";
 ds_map_add(global.itemName,object,"Reactor");
 ds_map_add(global.itemDescription,object,"Generates energy");
 ds_map_add(global.itemRole,object,"module");
@@ -566,10 +639,10 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "solar";
-global.item[11] = "solar";
+global.item[12] = "solar";
 ds_map_add(global.itemName,object,"Solar");
 ds_map_add(global.itemDescription,object,"Generates energy");
-ds_map_add(global.itemRole,object,"module");
+ds_map_add(global.itemRole,object,"attachment");
 ds_map_add(global.itemType,object,"energy");
 ds_map_add(global.itemMass,object,10.0);
 ds_map_add(global.itemArmor,object,5.0);
@@ -579,7 +652,7 @@ ds_map_add(global.itemThrust,object,0.0);
 ds_map_add(global.itemCogX,object,0.0);
 ds_map_add(global.itemCogY,object,0.0);
 ds_map_add(global.itemWidth,object,1.0);
-ds_map_add(global.itemHeight,object,1.0);
+ds_map_add(global.itemHeight,object,2.0);
 ds_map_add(global.itemEnergyGenerated,object,0.5);
 ds_map_add(global.itemEnergyConsumption,object,0.0);
 ds_map_add(global.itemEnergyStored,object,5.0);
@@ -589,13 +662,13 @@ ds_map_add(global.itemWeaponDeviation,object,0.0);
 ds_map_add(global.itemWeaponVolley,object,0.0);
 ds_map_add(global.itemWeaponVolleyDelay,object,0.0);
 ds_map_add(global.itemConnectionRight,object,false);
-ds_map_add(global.itemConnectionUp,object,false);
+ds_map_add(global.itemConnectionUp,object,true);
 ds_map_add(global.itemConnectionLeft,object,false);
 ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "laser_basic";
-global.item[12] = "laser_basic";
+global.item[13] = "laser_basic";
 ds_map_add(global.itemName,object,"Basic Laser");
 ds_map_add(global.itemDescription,object,"");
 ds_map_add(global.itemRole,object,"attachment");
@@ -624,7 +697,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "thruster_basic";
-global.item[13] = "thruster_basic";
+global.item[14] = "thruster_basic";
 ds_map_add(global.itemName,object,"Basic Thruster");
 ds_map_add(global.itemDescription,object,"");
 ds_map_add(global.itemRole,object,"attachment");
@@ -653,7 +726,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "engine_basic";
-global.item[14] = "engine_basic";
+global.item[15] = "engine_basic";
 ds_map_add(global.itemName,object,"Basic Engine");
 ds_map_add(global.itemDescription,object,"");
 ds_map_add(global.itemRole,object,"attachment");
@@ -682,7 +755,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "rocket_basic";
-global.item[15] = "rocket_basic";
+global.item[16] = "rocket_basic";
 ds_map_add(global.itemName,object,"Basic Rocket");
 ds_map_add(global.itemDescription,object,"");
 ds_map_add(global.itemRole,object,"attachment");
@@ -695,7 +768,7 @@ ds_map_add(global.itemThrust,object,75.0);
 ds_map_add(global.itemCogX,object,0.0);
 ds_map_add(global.itemCogY,object,0.0);
 ds_map_add(global.itemWidth,object,1.0);
-ds_map_add(global.itemHeight,object,2.0);
+ds_map_add(global.itemHeight,object,1.0);
 ds_map_add(global.itemEnergyGenerated,object,0.0);
 ds_map_add(global.itemEnergyConsumption,object,3.0);
 ds_map_add(global.itemEnergyStored,object,0.0);
@@ -711,7 +784,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "rocket_advanced";
-global.item[16] = "rocket_advanced";
+global.item[17] = "rocket_advanced";
 ds_map_add(global.itemName,object,"Advanced Rocket");
 ds_map_add(global.itemDescription,object,"");
 ds_map_add(global.itemRole,object,"attachment");
@@ -740,7 +813,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "rocket_expert";
-global.item[17] = "rocket_expert";
+global.item[18] = "rocket_expert";
 ds_map_add(global.itemName,object,"Expert Rocket");
 ds_map_add(global.itemDescription,object,"");
 ds_map_add(global.itemRole,object,"attachment");
@@ -768,4 +841,4 @@ ds_map_add(global.itemConnectionLeft,object,false);
 ds_map_add(global.itemConnectionDown,object,false);
 
 
-#macro itemAmount 18
+#macro itemAmount 19

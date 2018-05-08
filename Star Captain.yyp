@@ -96,6 +96,25 @@
             }
         },
         {
+            "Key": "06776f6f-ebbb-40aa-ae20-95be5eb667c0",
+            "Value": {
+                "id": "3e3f5b9f-44f5-42e1-8a71-24135fbc0478",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_nanonium_round\/spr_hull_nanonium_round.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0936408f-e9d6-4fa0-8e4a-5495bb74e45a",
             "Value": {
                 "id": "944a0913-c8cd-4232-adc8-eac3ba16d13e",
@@ -115,6 +134,25 @@
             }
         },
         {
+            "Key": "0950bf8f-2b15-4e5b-abae-8d0f289e689f",
+            "Value": {
+                "id": "f3aae76a-98be-4393-8fc2-809ae8621cc3",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aerogel_round_half\/spr_hull_aerogel_round_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "108ce6e7-0fec-40e0-b17b-36978afa3a8c",
             "Value": {
                 "id": "ea7890b7-7b81-4441-b6f0-51d0ff5f88b7",
@@ -129,7 +167,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_full_aluminum\/spr_hull_full_aluminum.yy",
+                "resourcePath": "sprites\/spr_hull_aluminum_full\/spr_hull_aluminum_full.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -167,7 +205,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_full_iron\/spr_hull_full_iron.yy",
+                "resourcePath": "sprites\/spr_hull_iron_full\/spr_hull_iron_full.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -210,25 +248,6 @@
             }
         },
         {
-            "Key": "185b0c32-d84f-4c66-b52a-b1c33c002f5a",
-            "Value": {
-                "id": "23ea96b3-57cb-4d47-a9cc-b875dcc3ac90",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "sprites\/spr_hull_edge_\/spr_hull_edge_.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "19182882-756e-4305-b20e-f9d82b36d5f8",
             "Value": {
                 "id": "6e22e241-3db9-4f27-98ce-4647895f982b",
@@ -243,7 +262,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_edge_starlite\/spr_hull_edge_starlite.yy",
+                "resourcePath": "sprites\/spr_hull_starlite_edge\/spr_hull_starlite_edge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -262,7 +281,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_nose_curved_iron\/spr_hull_nose_curved_iron.yy",
+                "resourcePath": "sprites\/spr_hull_iron_nose\/spr_hull_iron_nose.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -357,7 +376,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_full_titanium\/spr_hull_full_titanium.yy",
+                "resourcePath": "sprites\/spr_hull_titanium_full\/spr_hull_titanium_full.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -547,7 +566,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_nose_curved_nanonium\/spr_hull_nose_curved_nanonium.yy",
+                "resourcePath": "sprites\/spr_hull_nanonium_nose\/spr_hull_nanonium_nose.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -699,7 +718,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_nose_curved_starlite\/spr_hull_nose_curved_starlite.yy",
+                "resourcePath": "sprites\/spr_hull_starlite_nose\/spr_hull_starlite_nose.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -738,6 +757,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_icon_save\/spr_icon_save.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3aa78616-5fd6-4f63-8c93-0e731be78f99",
+            "Value": {
+                "id": "dc0a975b-1bb1-4825-b153-3570be873f38",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_nanonium_edge_half\/spr_hull_nanonium_edge_half.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -815,6 +853,25 @@
                 ],
                 "resourcePath": "views\/42d64af4-ecf6-4de6-b5e9-6aee41356dcf.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "453afc46-f8d3-40eb-9758-3ea7716fa149",
+            "Value": {
+                "id": "aa41e56d-c85e-4e20-b786-a2245efc3127",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_icon_plus\/spr_icon_plus.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -932,6 +989,44 @@
             }
         },
         {
+            "Key": "49ee2fc7-9c35-4e3e-ba75-ba139cdeb81e",
+            "Value": {
+                "id": "c9c89e79-2165-44f4-a246-9ad0717ce1dd",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aluminum_round\/spr_hull_aluminum_round.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4b162efe-d34b-4814-89c2-a990fa0bd0f0",
+            "Value": {
+                "id": "c010f2ae-0583-4df0-adc7-a9da349e44fb",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_titanium_round\/spr_hull_titanium_round.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4cd6a206-597f-488a-81b3-4aeb7e4a30d7",
             "Value": {
                 "id": "50c69fcb-628c-46a0-9150-4ec060f6a9ec",
@@ -1008,9 +1103,9 @@
             }
         },
         {
-            "Key": "545db4a5-32e4-4eca-a901-5cbbe1bdd9f9",
+            "Key": "51ba5dcf-5d65-41e9-b2ea-9fd3683f7e57",
             "Value": {
-                "id": "d87fcf14-85cf-4061-b682-f982cdb8df85",
+                "id": "91f5349a-3d96-4681-af1d-f54b626459c1",
                 "modelName": "GMResourceInfo",
                 "mvc": "1.0",
                 "configDeltaFiles": [
@@ -1022,7 +1117,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_full_\/spr_hull_full_.yy",
+                "resourcePath": "sprites\/spr_hull_iron_round_half\/spr_hull_iron_round_half.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1079,7 +1174,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_edge_titanium\/spr_hull_edge_titanium.yy",
+                "resourcePath": "sprites\/spr_hull_titanium_edge\/spr_hull_titanium_edge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1155,7 +1250,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_full_starlite\/spr_hull_full_starlite.yy",
+                "resourcePath": "sprites\/spr_hull_starlite_full\/spr_hull_starlite_full.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1179,6 +1274,63 @@
             }
         },
         {
+            "Key": "5e55b1bc-ea9d-4d35-b26c-f2c00c83838b",
+            "Value": {
+                "id": "0b12a18b-437e-483d-9917-7cd80faf6d6a",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aerogel_edge_half\/spr_hull_aerogel_edge_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6168d674-a091-4cbb-983e-91d721718eb1",
+            "Value": {
+                "id": "d33fc43c-fbb7-4272-91ff-dbe4a0eab1fa",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aerogel_half\/spr_hull_aerogel_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6260c86e-3ec3-4f4b-9037-4fe332b53f52",
+            "Value": {
+                "id": "0067b32e-b4a2-4c8d-ad37-924d66f60af4",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_iron_edge_half\/spr_hull_iron_edge_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "668092f7-e79c-41f7-8bb8-f82ac2d689d5",
             "Value": {
                 "id": "9326b68e-8357-482a-ae8d-9f24cbd21e00",
@@ -1193,7 +1345,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_nose_curved_aerogel\/spr_hull_nose_curved_aerogel.yy",
+                "resourcePath": "sprites\/spr_hull_aerogel_nose\/spr_hull_aerogel_nose.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1214,6 +1366,25 @@
                 ],
                 "resourcePath": "sprites\/spr_item_aluminum\/spr_item_aluminum.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6843ebb8-1499-4f0e-ae19-bd9daee6330c",
+            "Value": {
+                "id": "82204e30-ec7b-4e01-a09d-f378a1107020",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "fonts\/font_tiny\/font_tiny.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -1288,7 +1459,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_edge_iron\/spr_hull_edge_iron.yy",
+                "resourcePath": "sprites\/spr_hull_iron_edge\/spr_hull_iron_edge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1345,7 +1516,26 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_full_aerogel\/spr_hull_full_aerogel.yy",
+                "resourcePath": "sprites\/spr_hull_aerogel_full\/spr_hull_aerogel_full.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6fbaaba6-9e27-425d-a4b7-6fa09ce4a803",
+            "Value": {
+                "id": "793b64f7-7ada-443e-b286-65557e9eb5cf",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_titanium_half\/spr_hull_titanium_half.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1388,6 +1578,25 @@
             }
         },
         {
+            "Key": "767e8f41-1891-46aa-9ab3-f551740baffb",
+            "Value": {
+                "id": "70495306-8f2e-417e-8bb0-b78403486c45",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_starlite_edge_half\/spr_hull_starlite_edge_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "77a81d1f-d713-4263-ad7c-e3cd481a45c6",
             "Value": {
                 "id": "9b1aa742-46f5-4d33-a561-9f7c5bedb546",
@@ -1423,6 +1632,63 @@
                 ],
                 "resourcePath": "objects\/obj_game_controller\/obj_game_controller.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7a9d4452-e179-4c37-b72d-c016bb16c82b",
+            "Value": {
+                "id": "fd9dd59b-8acc-4276-ba5f-d41a6eb6ca9f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_icon_minus\/spr_icon_minus.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7db6348f-2802-4f8d-a10e-8adc924a28ba",
+            "Value": {
+                "id": "5daedb17-9760-443e-92c5-27e85049f35d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aluminum_half\/spr_hull_aluminum_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7f20cade-c3d7-4694-8dc5-72e6f772c18f",
+            "Value": {
+                "id": "3c3644b3-c42b-445a-a652-2b7ca5d9a1da",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_starlite_half\/spr_hull_starlite_half.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1483,6 +1749,25 @@
             }
         },
         {
+            "Key": "873a4592-48db-4319-b4fb-3efdc0d29cab",
+            "Value": {
+                "id": "8fcac45a-4e45-4323-a7f7-62940588123c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_titanium_round_half\/spr_hull_titanium_round_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "88c221ab-df3a-45be-b24e-f4074674ce20",
             "Value": {
                 "id": "f0235a74-019c-488a-9ece-af61ccea1c1d",
@@ -1537,6 +1822,25 @@
                 ],
                 "resourcePath": "scripts\/raycast_object\/raycast_object.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8c69d5d3-cc6e-4c5a-b4c5-72a3749d8935",
+            "Value": {
+                "id": "89d57714-58fa-4851-8fb0-fdd8fd9e5599",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_item__\/spr_item__.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1611,7 +1915,26 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_full_nanonium\/spr_hull_full_nanonium.yy",
+                "resourcePath": "sprites\/spr_hull_nanonium_full\/spr_hull_nanonium_full.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "94c1fb96-f80c-4d18-bb1c-8ca8d891c3c1",
+            "Value": {
+                "id": "e43ddfb9-e49d-4b1c-91e8-a15c4d562937",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_titanium_edge_half\/spr_hull_titanium_edge_half.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1654,6 +1977,44 @@
             }
         },
         {
+            "Key": "9643073f-2207-45c7-b110-29620a7208f2",
+            "Value": {
+                "id": "2d0b43b0-992e-478c-9254-f3d4c7c0fe41",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/console_log\/console_log.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9758c287-beb8-42e5-8ded-03198851d2ea",
+            "Value": {
+                "id": "5404318a-945e-4e65-b20e-56c8f30fa03d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_starlite_round\/spr_hull_starlite_round.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "981242ce-3e79-4098-adbe-eca7d8ca6d84",
             "Value": {
                 "id": "94b4ee37-71c9-461e-94ab-bb3c65f33b3e",
@@ -1670,6 +2031,25 @@
                 ],
                 "resourcePath": "views\/981242ce-3e79-4098-adbe-eca7d8ca6d84.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9a359e2c-e1a5-488b-9c54-660e77dd846a",
+            "Value": {
+                "id": "2fd424e0-21d0-4b99-bf2f-b3e9a370a5fe",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_ui_build_controller\/obj_ui_build_controller.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1692,6 +2072,25 @@
             }
         },
         {
+            "Key": "9ee30ea6-cedf-4d33-b4b3-2df4c6aa87f0",
+            "Value": {
+                "id": "30e0e567-959c-4f31-9552-d9c7be4a0681",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_nanonium_round_half\/spr_hull_nanonium_round_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a07661c8-e223-4837-9d52-f15ae853bed2",
             "Value": {
                 "id": "46525a74-db35-412e-8db1-fef099690540",
@@ -1706,7 +2105,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_edge_aluminum\/spr_hull_edge_aluminum.yy",
+                "resourcePath": "sprites\/spr_hull_aluminum_edge\/spr_hull_aluminum_edge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1749,6 +2148,44 @@
             }
         },
         {
+            "Key": "a1bc1e5e-a95a-4893-bafa-bbef445adb27",
+            "Value": {
+                "id": "8571d523-5567-42f7-b430-bb3a29f180c5",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_iron_half\/spr_hull_iron_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a1e4176f-a20b-4339-b5ab-78a15651623b",
+            "Value": {
+                "id": "470b7f0f-25bd-4155-9f7e-6a20d72d420d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_gui_map_hover\/spr_gui_map_hover.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a248faa6-ce88-41b2-8209-81c6f077a97f",
             "Value": {
                 "id": "61487be7-d188-40cc-a41f-78fe5442ee23",
@@ -1782,7 +2219,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_edge_aerogel\/spr_hull_edge_aerogel.yy",
+                "resourcePath": "sprites\/spr_hull_aerogel_edge\/spr_hull_aerogel_edge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1801,7 +2238,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_nose_curved_titanium\/spr_hull_nose_curved_titanium.yy",
+                "resourcePath": "sprites\/spr_hull_titanium_nose\/spr_hull_titanium_nose.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1860,6 +2297,25 @@
                 ],
                 "resourcePath": "objects\/obj_ui_hud_controller\/obj_ui_hud_controller.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "a8867665-09cd-496e-a231-589a1a2458bb",
+            "Value": {
+                "id": "5517443a-67f5-471a-b313-534f0ca2829b",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/connection_expand\/connection_expand.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1955,6 +2411,25 @@
                 ],
                 "resourcePath": "views\/b0c5f72c-65a1-4efb-a073-264b2180f16d.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b1e5fa2c-ab1d-4c58-9cef-ae67ff5ec955",
+            "Value": {
+                "id": "e0002c15-444c-46ce-8c78-8659de77c598",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_iron_round\/spr_hull_iron_round.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2124,7 +2599,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_nose_curved_aluminum\/spr_hull_nose_curved_aluminum.yy",
+                "resourcePath": "sprites\/spr_hull_aluminum_nose\/spr_hull_aluminum_nose.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2145,25 +2620,6 @@
                 ],
                 "resourcePath": "views\/bed128c8-b23c-4bb3-a3c7-602916ba79ae.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "bedffa5f-f47c-4d8f-a3ba-9d070496f3ed",
-            "Value": {
-                "id": "6bdd4e42-3e0e-4009-8141-43695ed37c86",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "sprites\/spr_hull_nose_curved_\/spr_hull_nose_curved_.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -2200,7 +2656,7 @@
                 "resourceCreationConfigs": [
                     "default"
                 ],
-                "resourcePath": "sprites\/spr_hull_edge_nanonium\/spr_hull_edge_nanonium.yy",
+                "resourcePath": "sprites\/spr_hull_nanonium_edge\/spr_hull_nanonium_edge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2376,6 +2832,25 @@
             }
         },
         {
+            "Key": "d8809171-8231-4a5c-b22f-f3da978d0897",
+            "Value": {
+                "id": "2a0abe26-a576-4d8f-a878-00d836853672",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aluminum_round_half\/spr_hull_aluminum_round_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "da254081-12a7-4587-bdf7-18e15d6298e7",
             "Value": {
                 "id": "948866a7-6803-49cb-ab59-0eace674f50b",
@@ -2430,6 +2905,44 @@
                 ],
                 "resourcePath": "scripts\/random_chance\/random_chance.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e0dabc64-d160-4829-ad8c-419c7decd4c2",
+            "Value": {
+                "id": "547f03d8-c059-48cb-b782-aa141c6913f0",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_icon_edit\/spr_icon_edit.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e3304fde-b93e-47bb-ae35-f94bcf0e88d2",
+            "Value": {
+                "id": "43b63906-51d8-4549-a6ae-44fc20d654a3",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aerogel_round\/spr_hull_aerogel_round.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2490,6 +3003,25 @@
             }
         },
         {
+            "Key": "e49cdd1f-3e51-4c2e-8e7a-2f7be94bd9b0",
+            "Value": {
+                "id": "acca792e-fd79-4e75-ae6b-01a819550b99",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_nanonium_half\/spr_hull_nanonium_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e68a9352-49fb-4d68-a65a-822af7cb7c0f",
             "Value": {
                 "id": "0c73aaf9-9e60-4a2d-836b-a5e982b5cdec",
@@ -2528,6 +3060,25 @@
             }
         },
         {
+            "Key": "eaa98732-8d9e-4ac2-9ed0-113c07c2e567",
+            "Value": {
+                "id": "8d865505-81d8-430e-afa6-38407d7db4f4",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_starlite_round_half\/spr_hull_starlite_round_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "eae90b36-baa2-4c91-817a-e21aa6696d44",
             "Value": {
                 "id": "74dd8817-da36-44d0-a407-a500f7580b99",
@@ -2544,25 +3095,6 @@
                 ],
                 "resourcePath": "sprites\/spr_item_starlite\/spr_item_starlite.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "eb7bfb92-7580-4f11-9cc0-baf83c0d0d52",
-            "Value": {
-                "id": "22543ea0-7e62-4ff8-9b53-70da2dd37685",
-                "modelName": "GMResourceInfo",
-                "mvc": "1.0",
-                "configDeltaFiles": [
-                    
-                ],
-                "configDeltas": [
-                    
-                ],
-                "resourceCreationConfigs": [
-                    "default"
-                ],
-                "resourcePath": "objects\/obj_ui_build_controller\/obj_ui_build_controller.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -2680,6 +3212,25 @@
             }
         },
         {
+            "Key": "f3cd4542-f382-4726-9d3c-3ff6c56823e5",
+            "Value": {
+                "id": "a926625a-e9a6-46cd-8f4b-be8a02d8ff82",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aluminum_edge_half\/spr_hull_aluminum_edge_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "5aacfeb4-6ee7-4086-bea7-4f5b19842449",
@@ -2794,9 +3345,11 @@
         "1196133f-fa47-4155-9269-81cba5e12670",
         "cd0ba0dd-eccc-48b3-9f58-b69e56767f2a",
         "1caf018b-803e-4f98-b148-ab2d9f25c908",
+        "9643073f-2207-45c7-b110-29620a7208f2",
         "ed84082f-90c9-4b5d-8185-8a36371c6110",
         "45b32df4-e8bd-4383-a430-8f73812e244b",
-        "cd0d31b4-0269-4f6f-a7e2-e8a82eb890f9"
+        "cd0d31b4-0269-4f6f-a7e2-e8a82eb890f9",
+        "a8867665-09cd-496e-a231-589a1a2458bb"
     ],
     "tutorial": ""
 }

@@ -1,9 +1,8 @@
 /// @description keystroke check
 
+//clear keys
 array_fill_1d(keyA,length,false);
 array_fill_1d(keyB,length,false);
-
-
 array_fill_1d(activateMap,length,false);
 	
 
@@ -44,7 +43,6 @@ for(var i = 0; i<length; i++){
 	}
 		
 		
-
 	activateMap[i] = boolean_return(keymapType[i] = "or" and (keyA[i] or keyB[i]),true,activateMap[i]);
 	activateMap[i] = boolean_return(keymapType[i] = "and" and (keyA[i] and keyB[i]),true,activateMap[i]);
 	activateMap[i] = boolean_return(keymapType[i] = "xor" and (keyA[i] xor keyB[i]),true,activateMap[i]);
