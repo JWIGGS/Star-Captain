@@ -1,6 +1,6 @@
 1.0.0←ed6a955d-5826-4f98-a450-10b414266c27←ed6a955d-5826-4f98-a450-10b414266c27|{
     "option_gameguid": "bafde081-0d8d-444c-8501-ac88252dc483",
-    "option_lastchanged": "04 May 2018 9:25:16",
+    "option_lastchanged": "12 May 2018 16:05:35",
     "option_game_speed": 640
 }←1225f6b0-ac20-43bd-a82e-be73fa0b6f4f|{
     "targets": 29263750006690030

@@ -12,7 +12,7 @@ for(var i = 0; i<layerAmount; i++){
 	draw_bar_sprite(layerButtonSprite[i],0,layerBarX,layerBarY,layerBarAngle,i,layerAmount);
 	
 	draw_text_formatting(c_white,fa_right,fa_middle,font_item_amount);
-	draw_text(draw_bar_point_x(layerBarX,layerBarY,layerBarAngle,i,layerAmount)+20,draw_bar_point_y(layerBarX,layerBarY,layerBarAngle,i,layerAmount)+16,layerButtonHotkey[i]);
+	draw_text(draw_bar_point_x(layerBarX,layerBarY,layerBarAngle,i,layerAmount)+20,draw_bar_point_y(layerBarX,layerBarY,layerBarAngle,i,layerAmount)+16,layerButtonHotkeyDisplay[i]);
 }
 
 //bottom bar
@@ -25,8 +25,8 @@ with(par_popup){
 switch(layerSelected){
 	
 	
-	//add
-	case 0:
+	//edit
+	case 1:
 		
 		if(global.player.inventoryMouseItem!=""){
 			
@@ -55,15 +55,11 @@ switch(layerSelected){
 		
 		break;
 		
-	//subtract
-	case 1:
+	//keybinds
+	case 0:
 	
 		break;
-		
-	//keymap
-	case 2:
-	
-		break;
+
 	
 	
 	

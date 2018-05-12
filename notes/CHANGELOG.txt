@@ -1,0 +1,14 @@
+CHANGELOG: Latest first
+
+May 11
+	Removed gridRefX and gridRefY for more favorable refMap
+	Fixed bugs where forces were being applied in the wrong position for large component
+	Removed keymapA, keymapB, and keymapType for a general keyMap
+	Changed spaceship input to match refMap
+	
+May 12
+	Fixed a bug where large components would give inconsistent thrust forces
+	Fixed a bug where matrix mouse wasn't updating after width and height update
+	Flipped position for main manu and context bars
+	
+	

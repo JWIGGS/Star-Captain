@@ -1,17 +1,12 @@
 BUGS:
 
-small memory leak for spaceship sprites
-
 
 TODO additions:
-make spaceship sprite larger than width and height
-spaceship radius of inertia for large blocks
-
 component placement check that all positions are connected
+
 
 
 
 TOTO tweaks:
 
-Inventory Hover barrier with shading by using subimage instad of rotated sprite
-flip menu bar with context bar (menu bar to left, context bar to right)
+Inventory Hover barrier sprite lighting using subimages instead of rotated sprite

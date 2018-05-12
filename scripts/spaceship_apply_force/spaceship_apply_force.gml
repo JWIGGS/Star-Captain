@@ -1,8 +1,11 @@
 var forcePositionX = argument0; ///@param forcePositionX
 var forcePositionY = argument1; ///@param forcePositionY
 var forceAngle = wrap(argument2,0,360); ///@param forceAngle
-var forceAmountTranslational = per_second(argument3*200); ///@param forceAmountTranslational;
-var forceAmountRotational = per_second(argument4*1); ///@param forceAmountRotational;
+var forceAmount = argument3; ///@param forceAmount
+
+var forceAmountTranslational = per_second(forceAmount*200);
+var forceAmountRotational = per_second(forceAmount*1);
+
 
 
 spdX += lengthdir_x((forceAmountTranslational)/(mass),forceAngle+dir);

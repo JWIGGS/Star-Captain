@@ -1,13 +1,11 @@
 /// @description 
 
 
-
 if(!active){
 	exit;	
 }
 
-
-obj_ui_inventory_controller.active = keyboard_check(vk_space);
+obj_ui_inventory_controller.active = keyboard_check(vk_space) and layerSelected = 1;
 
 with(par_popup){
 	if(active){
@@ -17,29 +15,31 @@ with(par_popup){
 
 
 //matrix mouse position
-matrixMouseX = ((mouse_x - global.player.x + global.player.sprite_xoffset - spaceshipOffsetX) div 32) + boolean_return(mouse_x - global.player.x + global.player.sprite_xoffset- spaceshipOffsetX<0,-1,0)
-matrixMouseY = ((mouse_y - global.player.y + global.player.sprite_yoffset - spaceshipOffsetY) div 32) + boolean_return(mouse_y - global.player.y + global.player.sprite_yoffset- spaceshipOffsetY<0,-1,0)
-
+matrixMouseX = ((mouse_x - global.player.x + global.player.sprite_xoffset -spaceshipSpriteOffset- spaceshipOffsetX) div 32) + boolean_return(mouse_x - global.player.x + global.player.sprite_xoffset-spaceshipSpriteOffset - spaceshipOffsetX<0,-1,0);
+matrixMouseY = ((mouse_y - global.player.y + global.player.sprite_yoffset -spaceshipSpriteOffset - spaceshipOffsetY) div 32) + boolean_return(mouse_y - global.player.y + global.player.sprite_yoffset-spaceshipSpriteOffset - spaceshipOffsetY<0,-1,0);
 
 //layer selection
 for(var i = 0; i <layerAmount; i++){
 	
 	layerButtonHover[i] = point_in_rectangle(gui_mouse_get_x(),gui_mouse_get_y(),draw_bar_point_x(layerBarX,layerBarY,layerBarAngle,i,layerAmount)-28,draw_bar_point_y(layerBarX,layerBarY,layerBarAngle,i,layerAmount)-28,draw_bar_point_x(layerBarX,layerBarY,layerBarAngle,i,layerAmount)+28,draw_bar_point_y(layerBarX,layerBarY,layerBarAngle,i,layerAmount)+28)
 	
-	if((layerButtonHover[i] and mouse_check_button_pressed(mb_left)) or keyboard_check_pressed(ord(layerButtonHotkey[i]))){
+	if((layerButtonHover[i] and mouse_check_button_pressed(mb_left)) or keyboard_check_pressed(layerButtonHotkey[i])){
 		layerSelected = i;
 	}
 	
 }
 
+
+
 switch(layerSelected){
 	
 	//editing
-	case 0:	
+	case 1:	
 
 		//editing - adding blocks
 		if(global.player.inventoryMouseItem!=""){
-
+			
+			
 			switch(map_data(global.itemData,itemDataRole,global.player.inventoryMouseItem)){
 				
 				//hull
@@ -57,56 +57,27 @@ switch(layerSelected){
 					}
 					
 					placeable = true;
-			
-					for(var i =0; i<length; i++){
-						if(gridX[i] = matrixMouseX and gridY[i] = matrixMouseY){
-							if(hullMap[i]!="" or componentMap[i]!=""){
-								placeable = false;	
-							}
-						}
-				
-					}
 					
+					if(matrixMouseX>=0 and matrixMouseY>=0){
+						placeable = indexMap[matrixMouseX,matrixMouseY]!=-1;
+					}
+
 					
 					if(mouse_check_button(mb_left) and placeable){
 
 
 						gridX[length] = matrixMouseX;
 						gridY[length] = matrixMouseY;
-						gridRefX[length] = matrixMouseX;
-						gridRefY[length] = matrixMouseY;
 						hullMap[length] = global.hull[hullSelected];
 						materialMap[length] = global.player.inventoryMouseItem;
 						rotationMap[length] = rotationSelected;
 						flipMap[length] = flipSelected;
-						componentMap[length] = "";
-						keymapA[length] = "";
-						keymapB[length] ="";
-						keymapType[length] = "or";
+						refMap[length] = length;
 					
 						length ++;
-					
-					
-						//expand width and height
-						if(matrixMouseX<0){
-							for(var i = 0; i<length; i++){
-								gridX[i] += abs(matrixMouseX);	
-								gridRefX[i] += abs(matrixMouseX);
-							}
-							spaceshipOffsetX -= 32*abs(matrixMouseX);
-						}
-						if(matrixMouseY<0){
-							for(var i = 0; i<length; i++){
-								gridY[i] += abs(matrixMouseY);
-								gridRefY[i] += abs(matrixMouseY);	
-							}
-							spaceshipOffsetY -= 32*abs(matrixMouseY);
-						}
-						
-						event_user(1);
-						
 
-					
+						event_user(1);
+
 					}
 					
 
@@ -124,7 +95,6 @@ switch(layerSelected){
 						flipMap[indexMap[matrixMouseX,matrixMouseY]] = flipSelected;
 						componentMap[indexMap[matrixMouseX,matrixMouseY]] = global.player.inventoryMouseItem;
 
-					
 					}
 				
 					break;
@@ -147,7 +117,6 @@ switch(layerSelected){
 								if(index!=-1){
 									if(componentMap[index] != "" or hullMap[index] != "" ){
 										placeable = false;
-										console_log(componentMap[index])
 										break;
 									}
 								}
@@ -161,6 +130,10 @@ switch(layerSelected){
 						var placeXMin = spaceshipMaxSize;
 						var placeYMin = spaceshipMaxSize;
 							
+						var startLength = length;
+						
+						
+						
 						for(var i = 0; i<map_data(global.itemData,itemDataWidth,global.player.inventoryMouseItem);i++){
 							for(var j= 0; j<map_data(global.itemData,itemDataHeight,global.player.inventoryMouseItem);j++){
 									
@@ -172,16 +145,13 @@ switch(layerSelected){
 									
 								gridX[length] = placeX;
 								gridY[length] = placeY;
-								gridRefX[length] = matrixMouseX;
-								gridRefY[length] = matrixMouseY;
 								hullMap[length] = "";
 								materialMap[length] = "";
 								rotationMap[length] = rotationSelected;
 								flipMap[length] = flipSelected;
 								componentMap[length] = boolean_return(i = 0 and j = 0,global.player.inventoryMouseItem,"_");
-								keymapA[length] = "";
-								keymapB[length] ="";
-								keymapType[length] = "or";
+								keyMap[length] = "";
+								refMap[length] = startLength;
 					
 								length ++;
 									
@@ -191,31 +161,10 @@ switch(layerSelected){
 									
 							}
 						}
-							
-							
-							
-							
-					
-					
-						//expand width and height
-						if(placeXMin<0){
-							for(var i = 0; i<length; i++){
-								gridX[i] += abs(placeXMin);	
-								gridRefX[i] += abs(placeXMin);
-							}
-							spaceshipOffsetX -= 32*abs(placeXMin);
-						}
-						if(placeYMin<0){
-							for(var i = 0; i<length; i++){
-								gridY[i] += abs(placeYMin);
-								gridRefY[i] += abs(placeYMin);	
-							}
-							spaceshipOffsetY -= 32*abs(placeYMin);
-						}
+						
 						
 						event_user(1);
-						
-						
+
 					
 					}
 					
@@ -234,43 +183,38 @@ switch(layerSelected){
 
 				if(gridX[i] = matrixMouseX and gridY[i] = matrixMouseY){
 					
-					var deleteIndex = indexMap[gridRefX[i],gridRefY[i]];
+					var deleteIndex = refMap[i];
 					
 					var deleteWidth = boolean_return(componentMap[deleteIndex]!="",map_data(global.itemData,itemDataWidth,componentMap[deleteIndex]),1);
 					var deleteHeight = boolean_return(componentMap[deleteIndex]!="",map_data(global.itemData,itemDataHeight ,componentMap[deleteIndex]),1);
 
 					var deleteAmount = deleteWidth*deleteHeight;
+					
 
 					for(var j =0; j<deleteAmount; j++){
 						length--;
 						for(var k = deleteIndex; k<length; k++){
 							gridX[k] = gridX[k+1];
 							gridY[k] = gridY[k+1];
-							gridRefX[k] = gridRefX[k+1];
-							gridRefY[k] = gridRefY[k+1];
 							hullMap[k] = hullMap[k+1]
 							materialMap[k] = materialMap[k+1];
 							rotationMap[k] = rotationMap[k+1];
 							flipMap[k] = flipMap[k+1];
 							componentMap[k] = componentMap[k+1];
-							keymapA[k] = keymapA[k+1];
-							keymapB[k] = keymapB[k+1];
-							keymapType[k] = keymapType[k+1];
+							keyMap[k] = keyMap[k+1];
+							refMap[k] = refMap[k+1]-1;
 					
 						}
 				
 						gridX[length] = 0;
 						gridY[length] = 0;
-						gridRefX[length] = -1;
-						gridRefY[length] = -1;
 						hullMap[length] = "";
 						materialMap[length] = "";
 						rotationMap[length] = 0;
 						flipMap[length] = 1;
 						componentMap[length] = "";
-						keymapA[length] = "";
-						keymapB[length] ="";
-						keymapType[length] = "or";
+						keyMap[length] = "";
+						refMap[length] = -1;
 					
 					}
 					
@@ -306,7 +250,57 @@ switch(layerSelected){
 		break;
 		
 	//keymap
-	case 1:
+	case 0:
+		
+		placeable = matrixMouseX>=0 and matrixMouseY>=0 and indexMap[matrixMouseX,matrixMouseY]!=-1 and componentMap[indexMap[matrixMouseX,matrixMouseY]]!="";
+		
+		if(placeable){
+			
+			var index = indexMap[matrixMouseX,matrixMouseY];
+			
+			//capital letters
+			for(var i = 65;i<91; i++){
+				if(keyboard_check_pressed(i)){
+					keyMap[index] = chr(i);
+					
+				}
+			}
+			//numbers
+			for(var i = 48;i<58; i++){
+				if(keyboard_check_pressed(i)){
+					keyMap[index] = chr(i);
+				}
+			}
+			//mouse
+			if(mouse_check_button_pressed(mb_left)){
+				keyMap[index] = "M1";
+			}
+			if(mouse_check_button_pressed(mb_right)){
+				keyMap[index] = "M2";
+			}
+			//other keys
+			if(keyboard_check_pressed(vk_up)){
+				keyMap[index] = "U^";
+			}
+			if(keyboard_check_pressed(vk_down)){
+				keyMap[index] = "D^";
+			}
+			if(keyboard_check_pressed(vk_left)){
+				keyMap[index] = "L^";
+			}
+			if(keyboard_check_pressed(vk_right)){
+				keyMap[index] = "R^";
+			}
+			if(keyboard_check_pressed(vk_space)){
+				keyMap[index] = "S^";
+			}
+			
+			if(keyboard_check(vk_backspace) or keyboard_check(vk_delete)){
+				keyMap[index] = "";
+			}
+			
+		}
+
 	
 		break;
 	

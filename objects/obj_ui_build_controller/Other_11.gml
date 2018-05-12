@@ -1,6 +1,8 @@
 /// @description update connections
 
 
+
+
 //populate connection directions
 array_fill_2d(connectionMap,width,height,false);
 array_fill_2d(connectionMapDirection,length,4,false);
@@ -31,23 +33,21 @@ for(var i = 0; i<length; i++){
 
 }
 
-if(minWidth>0){
+//if(minWidth>0){
 	for(var i = 0; i<length; i++){
 		gridX[i] -= minWidth;
-		gridRefX[i] -= minWidth;
 	}
 	spaceshipOffsetX += 32*minWidth;
 	width -= minWidth;
-}
+//}
 
-if(minHeight>0){
+//if(minHeight>0){
 	for(var i = 0; i<length; i++){
 		gridY[i] -= minHeight;
-		gridRefY[i] -= minHeight;
 	}
 	spaceshipOffsetY += 32*minHeight;
 	height -= minHeight;
-}
+//}
 
 
 
@@ -101,6 +101,9 @@ for(var i = 0; i<length; i++){
 	}
 }
 
+//update matrix mouse
+matrixMouseX = ((mouse_x - global.player.x + global.player.sprite_xoffset -spaceshipSpriteOffset- spaceshipOffsetX) div 32) + boolean_return(mouse_x - global.player.x + global.player.sprite_xoffset-spaceshipSpriteOffset - spaceshipOffsetX<0,-1,0);
+matrixMouseY = ((mouse_y - global.player.y + global.player.sprite_yoffset -spaceshipSpriteOffset - spaceshipOffsetY) div 32) + boolean_return(mouse_y - global.player.y + global.player.sprite_yoffset-spaceshipSpriteOffset - spaceshipOffsetY<0,-1,0);
 
 
 

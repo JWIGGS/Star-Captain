@@ -36,9 +36,9 @@ array_fill_1d(buttonSelected,buttonAmount,false);
 
 
 //bar
-barX = displayWidth;
+barX = 0;
 barY = displayHeight/2;
-barAngle = 90;
+barAngle = 270;
 
 
 //create menu objects

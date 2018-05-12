@@ -1540,6 +1540,25 @@
             }
         },
         {
+            "Key": "70152311-b665-497c-a8c1-ae4dac4feb0f",
+            "Value": {
+                "id": "7c270eed-3ad7-47bf-b7be-7d176609e5ed",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "notes\/CHANGELOG.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "71ba9cf7-04bf-45da-bc9e-517647e94f42",
             "Value": {
                 "id": "e17d032a-7e76-4087-b213-80f28000a25e",

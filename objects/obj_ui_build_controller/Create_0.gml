@@ -20,10 +20,6 @@ gridX[0] = 0;
 array_fill_1d(gridX,spaceshipMaxSize,0);
 gridY[0] = 0;
 array_fill_1d(gridY,spaceshipMaxSize,0);
-gridRefX[0] = 0;
-array_fill_1d(gridRefX,spaceshipMaxSize,0);
-gridRefY[0] = 0;
-array_fill_1d(gridRefY,spaceshipMaxSize,0);
 
 
 hullMap[0] = "";
@@ -36,12 +32,10 @@ flipMap[0] = 1;
 array_fill_1d(flipMap,spaceshipMaxSize,1);
 componentMap[0] = "";
 array_fill_1d(componentMap,spaceshipMaxSize,"");
-keymapA[0] = "";
-array_fill_1d(keymapA,spaceshipMaxSize,"");
-keymapB[0] = "";
-array_fill_1d(keymapB,spaceshipMaxSize,"");
-keymapType[0] = "";
-array_fill_1d(keymapType,spaceshipMaxSize,"");
+keyMap[0] = "";
+array_fill_1d(keyMap,spaceshipMaxSize,"");
+refMap[0] = -1;
+array_fill_1d(refMap,spaceshipMaxSize,-1);
 
 connectionMap[0,0] = false;
 array_fill_2d(connectionMap,spaceshipMaxSize,spaceshipMaxSize,false);
@@ -56,20 +50,23 @@ array_fill_1d(connectionMapMouse,4,false);
 //layer bar on left
 layerAmount = 2;
 
-layerButtonSprite[0] = spr_icon_edit;
-layerButtonSprite[1] = spr_icon_keyboard;
+layerButtonSprite[0] = spr_icon_keyboard;
+layerButtonSprite[1] = spr_icon_edit;
 
-layerButtonHotkey[0] = "E";
-layerButtonHotkey[1] = "W";
+layerButtonHotkeyDisplay[0] = "SHF";
+layerButtonHotkeyDisplay[1] = "TAB";
+
+layerButtonHotkey[0] = vk_shift;
+layerButtonHotkey[1] = vk_tab;
 
 layerButtonHover[0] = false;
 array_fill_1d(layerButtonHover,layerAmount,false);
 
-layerSelected = 0;
+layerSelected = 1;
 
-layerBarX = 0;
+layerBarX = displayWidth;
 layerBarY = displayHeight/2;
-layerBarAngle = 270;
+layerBarAngle = 90;
 
 hullSelected = 0;
 rotationSelected = 0;

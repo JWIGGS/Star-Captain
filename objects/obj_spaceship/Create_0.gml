@@ -15,6 +15,8 @@ gridX[0] = 0;
 array_fill_1d(gridX,length,0);
 gridY[0] = 0;
 array_fill_1d(gridY,length,0);
+refMap[0] = -1;
+array_fill_1d(refMap,length,-1);
 hullMap[0] = "";
 array_fill_1d(hullMap,length,"");
 materialMap[0] = "";
@@ -25,17 +27,16 @@ flipMap[0] = 1;
 array_fill_1d(flipMap,length,1);
 componentMap[0] = "";
 array_fill_1d(componentMap,length,"");
-keymapA[0] = "";
-array_fill_1d(keymapA,length,"");
-keymapB[0] = "";
-array_fill_1d(keymapB,length,"");
-keymapType[0] = "";
-array_fill_1d(keymapType,length,"");
+keyMap[0] = "";
+array_fill_1d(keyMap,length,"");
+
+
+activateMap[0] = false;
+array_fill_1d(activateMap,length,false);
 
 
 
 //movement
-inertia = 0;
 spdX = 0;
 spdY = 0;
 accelX = 0;
@@ -54,13 +55,8 @@ shieldCurrent = 0;
 energyMax = 0;
 energyCurrent = 0;
 
-//control presses
-keyA[0] = false;
-array_fill_1d(keyA,length,false);
-keyB[0] = false;
-array_fill_1d(keyB,length,false);
-activateMap[0] = false;
-array_fill_1d(activateMap,length,false);
+
+
 
 
 //inventory

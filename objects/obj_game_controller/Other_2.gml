@@ -10,3 +10,5 @@
 #macro color_red	make_color_rgb(251,0,7)
 #macro color_green	make_color_rgb(55,209,125)
 #macro color_dark	make_color_rgb(20,20,20)
+
+show_debug_overlay(true);
