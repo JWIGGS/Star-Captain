@@ -11,4 +11,9 @@
 #macro color_green	make_color_rgb(55,209,125)
 #macro color_dark	make_color_rgb(20,20,20)
 
+
+#macro inventoryStack 99
+#macro inventoryGridWidth 15
+#macro inventoryGridHeight 10
+
 show_debug_overlay(true);

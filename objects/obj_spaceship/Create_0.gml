@@ -78,12 +78,24 @@ inventorySelectionY = -1;
 inventorySelectionWidth = 0;
 inventorySelectionHeight = 0;
 
-inventoryCraftingItem = "";
-
-//default items
-for(var i = 0; i<itemAmount; i++){
-	inventory_add_item(global.item[i],99,id);
-}
-
 inventoryMouseItem = "";
 inventoryMouseAmount = 0;
+
+cameraX = x;
+cameraY = y;
+
+cameraTargetX = x;
+cameraTargetY = y;
+
+cameraZoom = 1;
+cameraTargetZoom = cameraZoom;
+cameraReset = true;
+cameraSmooth = false;
+
+
+
+//default items
+for(var i = 1; i<itemAmount; i++){
+	inventory_add_item(global.item[i],inventoryStack*2,id);
+}
+

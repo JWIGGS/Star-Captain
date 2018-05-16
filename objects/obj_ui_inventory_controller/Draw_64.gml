@@ -127,6 +127,7 @@ if(global.player.inventoryMouseItem != "" and global.player.inventoryMouseAmount
 	
 	draw_sprite_ext(asset_get_index("spr_item_"+global.player.inventoryMouseItem),0,gui_mouse_get_x()-(24*(1-(map_data(global.itemData,itemDataWidth,global.player.inventoryMouseItem)))),gui_mouse_get_y()-(24*(1-(map_data(global.itemData,itemDataHeight,global.player.inventoryMouseItem)))),1,1,0,c_white,1);
 	
+	draw_text_formatting(c_white,fa_right,fa_middle,font_item_amount);
 	draw_text(gui_mouse_get_x()+20+(48*(map_data(global.itemData,itemDataWidth,global.player.inventoryMouseItem)-1)),gui_mouse_get_y()+16+(48*(map_data(global.itemData,itemDataHeight,global.player.inventoryMouseItem)-1)),string(global.player.inventoryMouseAmount));
 }	
 

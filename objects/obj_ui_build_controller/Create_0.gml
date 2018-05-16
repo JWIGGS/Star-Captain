@@ -53,11 +53,11 @@ layerAmount = 2;
 layerButtonSprite[0] = spr_icon_keyboard;
 layerButtonSprite[1] = spr_icon_edit;
 
-layerButtonHotkeyDisplay[0] = "SHF";
-layerButtonHotkeyDisplay[1] = "TAB";
+layerButtonHotkeyDisplay[0] = "ALT";
+layerButtonHotkeyDisplay[1] = "SPC";
 
-layerButtonHotkey[0] = vk_shift;
-layerButtonHotkey[1] = vk_tab;
+layerButtonHotkey[0] = vk_alt;
+layerButtonHotkey[1] = vk_space;
 
 layerButtonHover[0] = false;
 array_fill_1d(layerButtonHover,layerAmount,false);

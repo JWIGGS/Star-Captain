@@ -1,12 +1,17 @@
-BUGS:
+SOLVABLE BUGS BUGS:
+
+inventory_add_item will go into endless loop when you add more items than the inventory can hold
+
+
+WEIRD BUGS:
+bug where connection for larger components says it is not connected when it should be.
 
 
 TODO additions:
-component placement check that all positions are connected
-
+Put disconnected blocks back into inventory
 
 
 
 TOTO tweaks:
-
 Inventory Hover barrier sprite lighting using subimages instead of rotated sprite
+

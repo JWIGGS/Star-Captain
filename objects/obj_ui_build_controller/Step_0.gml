@@ -35,9 +35,16 @@ switch(layerSelected){
 	
 	//editing
 	case 1:	
+		
+		if(global.player.inventoryMouseAmount<=0){
+			global.player.inventoryMouseItem="";
 
+		}
+		
 		//editing - adding blocks
 		if(global.player.inventoryMouseItem!=""){
+			
+			
 			
 			
 			switch(map_data(global.itemData,itemDataRole,global.player.inventoryMouseItem)){
@@ -58,8 +65,8 @@ switch(layerSelected){
 					
 					placeable = true;
 					
-					if(matrixMouseX>=0 and matrixMouseY>=0){
-						placeable = indexMap[matrixMouseX,matrixMouseY]!=-1;
+					if(point_in_rectangle_any(matrixMouseX,matrixMouseY,0,0,width,height)){
+						placeable = indexMap[matrixMouseX,matrixMouseY]=-1;
 					}
 
 					
@@ -71,10 +78,14 @@ switch(layerSelected){
 						hullMap[length] = global.hull[hullSelected];
 						materialMap[length] = global.player.inventoryMouseItem;
 						rotationMap[length] = rotationSelected;
+						componentMap[length] = "";
 						flipMap[length] = flipSelected;
 						refMap[length] = length;
+						keyMap[length] = "";
 					
 						length ++;
+						
+						global.player.inventoryMouseAmount --;
 
 						event_user(1);
 
@@ -94,6 +105,8 @@ switch(layerSelected){
 						rotationMap[indexMap[matrixMouseX,matrixMouseY]] = rotationSelected;
 						flipMap[indexMap[matrixMouseX,matrixMouseY]] = flipSelected;
 						componentMap[indexMap[matrixMouseX,matrixMouseY]] = global.player.inventoryMouseItem;
+						
+						global.player.inventoryMouseAmount --;
 
 					}
 				
@@ -162,6 +175,8 @@ switch(layerSelected){
 							}
 						}
 						
+						global.player.inventoryMouseAmount --;
+						
 						
 						event_user(1);
 
@@ -184,6 +199,9 @@ switch(layerSelected){
 				if(gridX[i] = matrixMouseX and gridY[i] = matrixMouseY){
 					
 					var deleteIndex = refMap[i];
+					
+					inventory_add_item(materialMap[deleteIndex],1,global.player);
+					inventory_add_item(componentMap[deleteIndex],1,global.player);
 					
 					var deleteWidth = boolean_return(componentMap[deleteIndex]!="",map_data(global.itemData,itemDataWidth,componentMap[deleteIndex]),1);
 					var deleteHeight = boolean_return(componentMap[deleteIndex]!="",map_data(global.itemData,itemDataHeight ,componentMap[deleteIndex]),1);
@@ -252,7 +270,7 @@ switch(layerSelected){
 	//keymap
 	case 0:
 		
-		placeable = matrixMouseX>=0 and matrixMouseY>=0 and indexMap[matrixMouseX,matrixMouseY]!=-1 and componentMap[indexMap[matrixMouseX,matrixMouseY]]!="";
+		placeable = !keyboard_check(vk_lshift) and matrixMouseX>=0 and matrixMouseY>=0 and indexMap[matrixMouseX,matrixMouseY]!=-1 and componentMap[indexMap[matrixMouseX,matrixMouseY]]!="";
 		
 		if(placeable){
 			

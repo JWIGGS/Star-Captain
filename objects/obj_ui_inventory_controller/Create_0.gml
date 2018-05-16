@@ -5,8 +5,7 @@ active = false;
 xPos = displayWidth/2;
 yPos = 64;
 
-inventoryGridWidth = 15;
-inventoryGridHeight = 10;
+
 inventoryGridSpacing = 48;
 
 inventoryGridX = (-inventoryGridWidth*(inventoryGridSpacing/2))+(inventoryGridSpacing/2);

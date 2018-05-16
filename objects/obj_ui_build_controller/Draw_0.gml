@@ -122,6 +122,10 @@ switch(layerSelected){
 					break;
 			
 			}
+			
+			
+			draw_text_formatting(c_white,fa_left,fa_top,font_item_amount);
+			draw_text(pointX,pointY,global.player.inventoryMouseAmount);
 		
 		}
 		else{

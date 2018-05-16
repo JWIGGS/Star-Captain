@@ -26,8 +26,15 @@ for(var i = 0; i<inventoryGridWidth; i++){
 				//drop mouse items into inventory if same
 				if(global.player.inventoryMouseItem = global.player.inventoryItem[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]){
 					global.player.inventoryAmount[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)] += global.player.inventoryMouseAmount;
-					global.player.inventoryMouseItem ="";
-					global.player.inventoryMouseAmount = 0;
+					
+					if(global.player.inventoryAmount[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]>inventoryStack){
+						global.player.inventoryMouseAmount = global.player.inventoryAmount[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)]-inventoryStack;
+						global.player.inventoryAmount[global.player.inventoryPageSelected,value_to_1d(i,j,inventoryGridWidth)] = inventoryStack;
+					}
+					else{
+						global.player.inventoryMouseItem ="";
+						global.player.inventoryMouseAmount = 0;
+					}
 				}
 
 				

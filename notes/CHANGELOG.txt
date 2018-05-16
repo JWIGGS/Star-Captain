@@ -1,14 +1,30 @@
 CHANGELOG: Latest first
 
+May 16
+	Added smooth camera activated using lshift
+		Camera moves by lshift and WSAD
+		Tapping lshift send camera to spaceship
+	Fixed a bug where placing large components in certain positions would crash game
+	Changed building keybinds
+		Alt for keybinds
+		Space for edit
+
+May 14
+	Changed connection check for components so that all connected blocks must be valid
+	Placing/removing linked to inventory
+
+
+May 12
+	Fixed a bug where large components would give inconsistent thrust forces
+	Fixed a bug where matrix mouse wasn't updating after width and height update
+	Flipped position for main manu and context bars
+
 May 11
 	Removed gridRefX and gridRefY for more favorable refMap
 	Fixed bugs where forces were being applied in the wrong position for large component
 	Removed keymapA, keymapB, and keymapType for a general keyMap
 	Changed spaceship input to match refMap
 	
-May 12
-	Fixed a bug where large components would give inconsistent thrust forces
-	Fixed a bug where matrix mouse wasn't updating after width and height update
-	Flipped position for main manu and context bars
-	
+
+
 	
