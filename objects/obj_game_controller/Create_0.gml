@@ -33,9 +33,9 @@ global.spaceshipBufferLength = 0;
 //default ship
 global.spaceshipBufferGridX[0] = 2;
 global.spaceshipBufferGridY[0] = 0;
-global.spaceshipBufferHull[0] = "nose";
+global.spaceshipBufferHull[0] = "";
 global.spaceshipBufferComponent[0] = "cockpit";
-global.spaceshipBufferRotation[0] = 0;
+global.spaceshipBufferRotation[0] = 90;
 global.spaceshipBufferRef[0] = 0;
 
 global.spaceshipBufferGridX[1] = 2;
@@ -89,6 +89,17 @@ global.spaceshipBufferLength = 9;
 
 //create starting ship
 global.player = create_spaceship(room_width/2,room_height/2,true);
+global.cameraFollowing = global.player;
+global.cameraObject = instance_create_depth(global.player.x,global.player.y,depth,obj_camera_controller);
+
+
+
+global.starCount = 500;
+global.starBound = 4000;
+
+repeat(global.starCount){
+	instance_create_depth(irandom_range((room_width/2)-global.starBound,(room_width/2)+global.starBound),irandom_range((room_height/2)-global.starBound,(room_height/2)+global.starBound),0,obj_star);
+}
 
 
 

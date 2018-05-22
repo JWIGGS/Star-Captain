@@ -1,17 +1,25 @@
-SOLVABLE BUGS BUGS:
+SOLVABLE BUGS:
 
 inventory_add_item will go into endless loop when you add more items than the inventory can hold
 
 
 WEIRD BUGS:
-bug where connection for larger components says it is not connected when it should be.
 
 
 TODO additions:
 Put disconnected blocks back into inventory
+	check if there are still blocks left(eg 1 attachment)
+Show center of mass while building
+Rework building keybinds
+
+
+
 
 
 
 TOTO tweaks:
 Inventory Hover barrier sprite lighting using subimages instead of rotated sprite
+Highight attachments that can be activated
+
+Parallax stars with zoom algorithm
 

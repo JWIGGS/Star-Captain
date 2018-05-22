@@ -14,22 +14,6 @@ var cameraYEnd = cameraYStart + camera_get_view_height(view_camera[0]);
 draw_set_color(color_dark);
 draw_rectangle(cameraXStart,cameraYStart,cameraXEnd,cameraYEnd,false);
 
-/*
-//draw blueprint lines
-draw_set_color(c_white);
-draw_set_alpha(.1);
-for(var i = (((cameraXStart-32) div 32) * 32) + ((global.player.x) mod 32) + (global.player.sprite_xoffset mod 32); i<((cameraXEnd+32) div 32)*32; i+=32){
-	draw_line(i,cameraYStart,i,cameraYEnd);
-}
-for(var j = (((cameraYStart-32) div 32) * 32) + ((global.player.y) mod 32) + (global.player.sprite_yoffset mod 32); j<((cameraYEnd+32) div 32)*32; j+=32){
-	draw_line(cameraXStart,j,cameraXEnd,j);
-}
-
-draw_set_alpha(1);
-*/
-
-
-
 //draw spaceship
 draw_text_formatting(c_white,fa_center,fa_middle,font_item_amount);
 

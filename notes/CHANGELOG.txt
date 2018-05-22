@@ -1,5 +1,19 @@
 CHANGELOG: Latest first
 
+May 22
+	Added parallax position stars
+	Removed dot grid
+	Moved camera controller to separate object
+	
+	
+
+May 19
+	Fixed a crash where holding an item while deleting the entire spaceship
+	Fixed a bug attachment is connected but it says it isnt
+	Fixed a bug where camera locks onto spaceship if camera is close enough to spaceship
+	Fixed a bug where cog position was incorrect due to incorrect internal cog rotation of hull block with offset
+	Fixed multiple bugs where lag spikes would occur when placing or deleting certain blocks
+
 May 16
 	Added smooth camera activated using lshift
 		Camera moves by lshift and WSAD

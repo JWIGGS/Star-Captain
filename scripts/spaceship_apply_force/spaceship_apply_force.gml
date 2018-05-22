@@ -3,8 +3,8 @@ var forcePositionY = argument1; ///@param forcePositionY
 var forceAngle = wrap(argument2,0,360); ///@param forceAngle
 var forceAmount = argument3; ///@param forceAmount
 
-var forceAmountTranslational = per_second(forceAmount*200);
-var forceAmountRotational = per_second(forceAmount*1);
+var forceAmountTranslational = per_second(forceAmount*100);
+var forceAmountRotational = per_second(forceAmount*2);
 
 
 

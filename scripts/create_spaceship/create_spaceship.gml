@@ -39,6 +39,9 @@ with(spaceship){
 	
 	}
 	player = argument2; ///@param player
+	if(player){
+		global.cameraFollowing = id;	
+	}
 
 	//surface setup
 	var surfaceWidth = (maxWidth*32)+(spaceshipSpriteOffset*2);
@@ -63,11 +66,10 @@ with(spaceship){
 		if(hullMap[i]!=""){
 			
 			draw_sprite_ext(asset_get_index("spr_hull_"+materialMap[i]+"_"+hullMap[i]),0,spaceshipSpriteOffset+(gridX[i]*32)+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),spaceshipSpriteOffset+(gridY[i]*32)+(16*(1-((rotationMap[i] mod 180)/90)))+(16*(((rotationMap[i] mod 180)/90))),flipMap[i],1,rotationMap[i],c_white,1);
-				
 
-			cogX += ((gridX[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i],"x"))*map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
-			cogY += ((gridY[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i],"y"))*map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
-				
+			cogX += ((gridX[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i]+90,"x"))*map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
+			cogY += ((gridY[i]*32)+16+rotate_around_point(map_data(global.hullData,hullDataCogX,hullMap[i])*flipMap[i],map_data(global.hullData,hullDataCogY,hullMap[i]),0,0,rotationMap[i]+90,"y"))*map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
+
 			cogTotal += map_data(global.itemData,itemDataMass,materialMap[i])*map_data(global.hullData,hullDataSize,hullMap[i]);
 				
 			//hull stats
@@ -115,8 +117,8 @@ with(spaceship){
 	
 	
 	//calculate cog
-	cogX = ceil(cogX / cogTotal)+spaceshipSpriteOffset;
-	cogY = ceil(cogY / cogTotal)+spaceshipSpriteOffset;
+	cogX = (cogX / cogTotal)+spaceshipSpriteOffset;
+	cogY = (cogY / cogTotal)+spaceshipSpriteOffset;
 	
 	
 

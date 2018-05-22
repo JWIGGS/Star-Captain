@@ -1,11 +1,5 @@
 /// @description update connections
 
-
-//populate connection directions
-array_fill_2d(connectionMap,width,height,false);
-array_fill_2d(connectionMapDirection,length,4,false);
-array_fill_2d(indexMap,width,height,-1);
-
 //update width and height
 width = 0;
 height = 0;
@@ -31,6 +25,11 @@ for(var i = 0; i<length; i++){
 
 }
 
+if(length = 0){
+	minWidth = 0;
+	minHeight = 0;
+}
+
 
 for(var i = 0; i<length; i++){
 	gridX[i] -= minWidth;
@@ -47,8 +46,10 @@ height -= minHeight;
 
 
 
-
-
+//populate connection directions
+array_fill_2d(connectionMap,width,height,false);
+array_fill_2d(connectionMapDirection,length,4,false);
+array_fill_2d(indexMap,width,height,-1);
 
 for(var i = 0; i<length; i++){
 	
@@ -100,9 +101,10 @@ for(var i = 0; i<length; i++){
 	}
 }
 
+
 //expand component connections
 for(var i = 0; i<length; i++){
-	if(componentMap[i]!="" and componentMap[i]!="_" and !connectionMap[i] and map_data(global.itemData,itemDataRole,componentMap[i])="attachment"){
+	if(componentMap[i]!="" and componentMap[i]!="_" and map_data(global.itemData,itemDataRole,componentMap[i])="attachment"){
 		
 		var horizontalCheck = map_data(global.itemData,itemDataConnectionUp,componentMap[i]);
 		
@@ -115,6 +117,8 @@ for(var i = 0; i<length; i++){
 
 		
 		var connected = true;
+
+		
 		
 		for(var j = 0; j<checkLength; j++){
 			
@@ -123,7 +127,6 @@ for(var i = 0; i<length; i++){
 				var checkY = checkYStart - round(rotate_around_point(j,0,0,0,checkAngle-90,"y"));
 			
 				connected = checkX>=0 and checkX<width and checkY>=0 and checkY<height and indexMap[checkX,checkY]!=-1 and hullMap[indexMap[checkX,checkY]]!="" and connectionMap[checkX,checkY] and connectionMapDirection[indexMap[checkX,checkY],wrap((checkAngle div 90)-1,0,4)];
-
 			}
 			else{
 				break;	
@@ -135,7 +138,11 @@ for(var i = 0; i<length; i++){
 		connectionMap[gridX[i],gridY[i]] = connected;
 
 	}
+
+	
 }
+
+
 
 
 
@@ -145,7 +152,6 @@ for(var i = 0; i<length; i++){
 //update matrix mouse
 matrixMouseX = ((mouse_x - global.player.x + global.player.sprite_xoffset -spaceshipSpriteOffset- spaceshipOffsetX) div 32) + boolean_return(mouse_x - global.player.x + global.player.sprite_xoffset-spaceshipSpriteOffset - spaceshipOffsetX<0,-1,0);
 matrixMouseY = ((mouse_y - global.player.y + global.player.sprite_yoffset -spaceshipSpriteOffset - spaceshipOffsetY) div 32) + boolean_return(mouse_y - global.player.y + global.player.sprite_yoffset-spaceshipSpriteOffset - spaceshipOffsetY<0,-1,0);
-
 
 
 

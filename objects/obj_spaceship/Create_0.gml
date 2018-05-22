@@ -56,9 +56,6 @@ energyMax = 0;
 energyCurrent = 0;
 
 
-
-
-
 //inventory
 inventoryPageSize = 150;
 inventoryPageSelected = 0;
@@ -80,18 +77,6 @@ inventorySelectionHeight = 0;
 
 inventoryMouseItem = "";
 inventoryMouseAmount = 0;
-
-cameraX = x;
-cameraY = y;
-
-cameraTargetX = x;
-cameraTargetY = y;
-
-cameraZoom = 1;
-cameraTargetZoom = cameraZoom;
-cameraReset = true;
-cameraSmooth = false;
-
 
 
 //default items

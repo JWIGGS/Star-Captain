@@ -3,8 +3,9 @@
 #macro spaceshipMaxSize 1024
 #macro spaceshipSpriteOffset 64
 
-#macro displayWidth 1024
-#macro displayHeight 768
+
+#macro displayWidth 1280
+#macro displayHeight 780
 
 #macro color_blue	make_color_rgb(109,168,255)
 #macro color_red	make_color_rgb(251,0,7)

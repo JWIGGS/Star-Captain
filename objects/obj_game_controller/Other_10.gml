@@ -74,19 +74,8 @@ ds_map_add(global.hullCogX,object,6.0);
 ds_map_add(global.hullCogY,object,6.0);
 
 
-var object = "nose";
-global.hull[2] = "nose";
-ds_map_add(global.hullConnectionRight,object,false);
-ds_map_add(global.hullConnectionUp,object,false);
-ds_map_add(global.hullConnectionLeft,object,false);
-ds_map_add(global.hullConnectionDown,object,true);
-ds_map_add(global.hullSize,object,0.75);
-ds_map_add(global.hullCogX,object,0.0);
-ds_map_add(global.hullCogY,object,2.0);
-
-
 var object = "half";
-global.hull[3] = "half";
+global.hull[2] = "half";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,true);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -97,7 +86,7 @@ ds_map_add(global.hullCogY,object,0.0);
 
 
 var object = "round";
-global.hull[4] = "round";
+global.hull[3] = "round";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,false);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -108,7 +97,7 @@ ds_map_add(global.hullCogY,object,2.0);
 
 
 var object = "edge_half";
-global.hull[5] = "edge_half";
+global.hull[4] = "edge_half";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,false);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -119,7 +108,7 @@ ds_map_add(global.hullCogY,object,2.0);
 
 
 var object = "round_half";
-global.hull[6] = "round_half";
+global.hull[5] = "round_half";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,false);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -129,7 +118,7 @@ ds_map_add(global.hullCogX,object,6.0);
 ds_map_add(global.hullCogY,object,2.0);
 
 
-#macro hullAmount 7
+#macro hullAmount 6
 
 
 /////////////////////////
@@ -551,37 +540,8 @@ ds_map_add(global.itemConnectionLeft,object,false);
 ds_map_add(global.itemConnectionDown,object,false);
 
 
-var object = "cockpit";
-global.item[9] = "cockpit";
-ds_map_add(global.itemName,object,"Cockpit");
-ds_map_add(global.itemDescription,object,"Core of your ship");
-ds_map_add(global.itemRole,object,"module");
-ds_map_add(global.itemType,object,"cockpit");
-ds_map_add(global.itemMass,object,40.0);
-ds_map_add(global.itemArmor,object,40.0);
-ds_map_add(global.itemShield,object,0.0);
-ds_map_add(global.itemQPU,object,50.0);
-ds_map_add(global.itemThrust,object,0.0);
-ds_map_add(global.itemCogX,object,0.0);
-ds_map_add(global.itemCogY,object,2.0);
-ds_map_add(global.itemWidth,object,1.0);
-ds_map_add(global.itemHeight,object,1.0);
-ds_map_add(global.itemEnergyGenerated,object,1.0);
-ds_map_add(global.itemEnergyConsumption,object,0.0);
-ds_map_add(global.itemEnergyStored,object,20.0);
-ds_map_add(global.itemRateOfFire,object,0.0);
-ds_map_add(global.itemWeaponDamage,object,0.0);
-ds_map_add(global.itemWeaponDeviation,object,0.0);
-ds_map_add(global.itemWeaponVolley,object,0.0);
-ds_map_add(global.itemWeaponVolleyDelay,object,0.0);
-ds_map_add(global.itemConnectionRight,object,false);
-ds_map_add(global.itemConnectionUp,object,false);
-ds_map_add(global.itemConnectionLeft,object,false);
-ds_map_add(global.itemConnectionDown,object,false);
-
-
 var object = "processor";
-global.item[10] = "processor";
+global.item[9] = "processor";
 ds_map_add(global.itemName,object,"Processor");
 ds_map_add(global.itemDescription,object,"Increases QPU");
 ds_map_add(global.itemRole,object,"module");
@@ -610,7 +570,7 @@ ds_map_add(global.itemConnectionDown,object,false);
 
 
 var object = "reactor";
-global.item[11] = "reactor";
+global.item[10] = "reactor";
 ds_map_add(global.itemName,object,"Reactor");
 ds_map_add(global.itemDescription,object,"Generates energy");
 ds_map_add(global.itemRole,object,"module");
@@ -635,6 +595,35 @@ ds_map_add(global.itemWeaponVolleyDelay,object,0.0);
 ds_map_add(global.itemConnectionRight,object,false);
 ds_map_add(global.itemConnectionUp,object,false);
 ds_map_add(global.itemConnectionLeft,object,false);
+ds_map_add(global.itemConnectionDown,object,false);
+
+
+var object = "cockpit";
+global.item[11] = "cockpit";
+ds_map_add(global.itemName,object,"Cockpit");
+ds_map_add(global.itemDescription,object,"Core of your ship");
+ds_map_add(global.itemRole,object,"attachment");
+ds_map_add(global.itemType,object,"cockpit");
+ds_map_add(global.itemMass,object,40.0);
+ds_map_add(global.itemArmor,object,40.0);
+ds_map_add(global.itemShield,object,0.0);
+ds_map_add(global.itemQPU,object,50.0);
+ds_map_add(global.itemThrust,object,0.0);
+ds_map_add(global.itemCogX,object,0.0);
+ds_map_add(global.itemCogY,object,2.0);
+ds_map_add(global.itemWidth,object,1.0);
+ds_map_add(global.itemHeight,object,1.0);
+ds_map_add(global.itemEnergyGenerated,object,1.0);
+ds_map_add(global.itemEnergyConsumption,object,0.0);
+ds_map_add(global.itemEnergyStored,object,20.0);
+ds_map_add(global.itemRateOfFire,object,0.0);
+ds_map_add(global.itemWeaponDamage,object,0.0);
+ds_map_add(global.itemWeaponDeviation,object,0.0);
+ds_map_add(global.itemWeaponVolley,object,0.0);
+ds_map_add(global.itemWeaponVolleyDelay,object,0.0);
+ds_map_add(global.itemConnectionRight,object,false);
+ds_map_add(global.itemConnectionUp,object,false);
+ds_map_add(global.itemConnectionLeft,object,true);
 ds_map_add(global.itemConnectionDown,object,false);
 
 

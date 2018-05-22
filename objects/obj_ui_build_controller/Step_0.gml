@@ -65,7 +65,7 @@ switch(layerSelected){
 					
 					placeable = true;
 					
-					if(point_in_rectangle_any(matrixMouseX,matrixMouseY,0,0,width,height)){
+					if(matrixMouseX >=0 and matrixMouseX<width and matrixMouseY>=0 and matrixMouseY<height){
 						placeable = indexMap[matrixMouseX,matrixMouseY]=-1;
 					}
 
