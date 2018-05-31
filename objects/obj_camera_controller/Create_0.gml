@@ -8,7 +8,7 @@ cameraTargetY = y;
 cameraZoom = 1;
 cameraTargetZoom = cameraZoom;
 cameraZoomMin = .5;
-cameraZoomMax = 2;
+cameraZoomMax = 8;
 cameraZoomDelta = .1;
 
 cameraLock = true;

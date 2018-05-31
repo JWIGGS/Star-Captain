@@ -93,6 +93,12 @@ global.cameraFollowing = global.player;
 global.cameraObject = instance_create_depth(global.player.x,global.player.y,depth,obj_camera_controller);
 
 
+with(instance_create_depth(global.player.x-10,global.player.y-10,-10,obj_player)){
+	spaceship = global.player;
+	relativeX = -10;
+	relativeY = -10;
+}
+
 
 global.starCount = 500;
 global.starBound = 4000;
@@ -100,6 +106,8 @@ global.starBound = 4000;
 repeat(global.starCount){
 	instance_create_depth(irandom_range((room_width/2)-global.starBound,(room_width/2)+global.starBound),irandom_range((room_height/2)-global.starBound,(room_height/2)+global.starBound),0,obj_star);
 }
+
+
 
 
 

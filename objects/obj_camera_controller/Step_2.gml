@@ -43,7 +43,7 @@ if(instance_exists(global.cameraFollowing)){
 	cameraZoom += smooth_to_target(cameraTargetZoom,cameraZoom,5);
 }
 
-camera_movement(x,y,view_camera[0],displayWidth, displayHeight,cameraZoom,0);
+camera_movement(x,y,view_camera[0],displayWidth, displayHeight,cameraZoom,-global.cameraFollowing.dir+90);
 
 
 //parallax stars

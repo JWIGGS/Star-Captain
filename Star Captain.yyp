@@ -153,6 +153,25 @@
             }
         },
         {
+            "Key": "0a6884e4-424f-4ed8-b8d1-fb368f4388d7",
+            "Value": {
+                "id": "9e58fe67-0650-47b7-aada-ffdbbd2b0c1d",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_player\/spr_player.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "108ce6e7-0fec-40e0-b17b-36978afa3a8c",
             "Value": {
                 "id": "ea7890b7-7b81-4441-b6f0-51d0ff5f88b7",
@@ -2240,6 +2259,25 @@
                 ],
                 "resourcePath": "sprites\/spr_hull_aerogel_edge\/spr_hull_aerogel_edge.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a3e6aa06-99a4-4aea-af43-a08b630e7778",
+            "Value": {
+                "id": "3caca90f-51fc-4fb2-8ff3-aaf3157a3aff",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_player\/obj_player.yy",
+                "resourceType": "GMObject"
             }
         },
         {
