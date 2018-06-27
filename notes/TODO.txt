@@ -1,16 +1,36 @@
 SOLVABLE BUGS:
 
 inventory_add_item will go into endless loop when you add more items than the inventory can hold
+collisions for player doesnt work when spaceship is rotating
+block placement for negative matrix vaues are off by 1
+
+mouse is too fine due to zooming
+	need to scale
 
 
 WEIRD BUGS:
 
 
-TODO additions:
-Put disconnected blocks back into inventory
-	check if there are still blocks left(eg 1 attachment)
-Show center of mass while building
-Rework building keybinds
+
+TODO additions
+
+Limitations on where you can and cannot place blocks
+	Must be connected to spaceship
+
+
+Tools
+	Drills
+		- deleting walls, hull, components
+		- Higher tiers destroy faster and more higher tiered blocks
+	Wrench
+		- For configuring inputs and outputs and for linking components together
+	
+Interctions with components
+	Control panel controls connected components
+	Engines need fuel
+
+
+
 
 
 
@@ -21,5 +41,4 @@ TOTO tweaks:
 Inventory Hover barrier sprite lighting using subimages instead of rotated sprite
 Highight attachments that can be activated
 
-Parallax stars with zoom algorithm
 

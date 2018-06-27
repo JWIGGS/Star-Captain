@@ -5,7 +5,7 @@ var xOffset = argument3; ///@param xOffset
 var yOffset = argument4; ///@param yOffset
 var relativeDepth = argument5; ///@param relativeDepth
 
-var xCreate = rotate_around_point((x-sprite_xoffset)+(xGrid*32)+16+xOffset,(y-sprite_yoffset)+(yGrid*32)+16+yOffset,x,y,dir,"x");
-var yCreate = rotate_around_point((x-sprite_xoffset)+(xGrid*32)+16+xOffset,(y-sprite_yoffset)+(yGrid*32)+16+yOffset,x,y,dir,"y");
+var xCreate = rotate_around_point((x-sprite_xoffset)+(xGrid*gridSize)+(gridSize/2)+xOffset,(y-sprite_yoffset)+(yGrid*gridSize)+(gridSize/2)+yOffset,x,y,dir,"x");
+var yCreate = rotate_around_point((x-sprite_xoffset)+(xGrid*gridSize)+(gridSize/2)+xOffset,(y-sprite_yoffset)+(yGrid*gridSize)+(gridSize/2)+yOffset,x,y,dir,"y");
 
 return instance_create_depth(xCreate,yCreate,depth+relativeDepth,instance);

@@ -44,8 +44,6 @@ array_fill_2d(indexMap,spaceshipMaxSize,spaceshipMaxSize,-1);
 
 connectionMapDirection[0,0] = false;
 array_fill_2d(connectionMapDirection,spaceshipMaxSize,4,false);
-connectionMapMouse[0] = false;
-array_fill_1d(connectionMapMouse,4,false);
 
 //layer bar on left
 layerAmount = 2;

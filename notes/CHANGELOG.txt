@@ -1,5 +1,13 @@
 CHANGELOG: Latest first
 
+
+June 1
+	Refactored grid to macro
+
+
+May 31
+	Added player
+
 May 22
 	Added parallax position stars
 	Removed dot grid

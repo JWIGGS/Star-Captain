@@ -73,7 +73,7 @@ switch(layerSelected){
 	//edit
 	case 1:
 		if(global.player.inventoryMouseItem!="" and !mouse_check_button(mb_right)){
-			switch(map_data(global.itemData,itemDataRole,global.player.inventoryMouseItem)){
+			switch(map_data(global.itemData,itemDataClass,global.player.inventoryMouseItem)){
 				
 				//hull
 				case "material":

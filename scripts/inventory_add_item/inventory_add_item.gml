@@ -10,9 +10,10 @@ if(item!=""){
 		
 		if(inventoryMouseItem = item){
 			inventoryMouseAmount += amount;
-			if(inventoryMouseAmount>inventoryStack){
-				amount = inventoryMouseAmount-inventoryStack;
-				inventoryMouseAmount = inventoryStack;		
+			var stack  = map_data(global.itemData,itemDataStack,inventoryMouseItem);
+			if(inventoryMouseAmount>stack){
+				amount = inventoryMouseAmount-stack;
+				inventoryMouseAmount = stack;		
 			}
 			else{
 				placedItems = true;
@@ -24,9 +25,10 @@ if(item!=""){
 			for(var j = 0; j<inventoryPageSize; j++){
 				if(inventoryItem[i,j] = item){
 					inventoryAmount[i,j] += amount;
-					if(inventoryAmount[i,j]>inventoryStack){
-						amount = inventoryAmount[i,j]-inventoryStack;
-						inventoryAmount[i,j] = inventoryStack;
+					var stack = map_data(global.itemData,itemDataStack,inventoryItem[i,j]);
+					if(inventoryAmount[i,j]>stack){
+						amount = inventoryAmount[i,j]-stack;
+						inventoryAmount[i,j] = stack;
 						
 					}
 					else{
@@ -69,10 +71,10 @@ if(item!=""){
 								
 							}
 						}
-						
-						if(inventoryAmount[i,j]>inventoryStack){
-							amount = inventoryAmount[i,j]-inventoryStack;
-							inventoryAmount[i,j] = inventoryStack;
+						var stack = map_data(global.itemData,itemDataStack,inventoryItem[i,j]);
+						if(inventoryAmount[i,j]>stack){
+							amount = inventoryAmount[i,j]-stack;
+							inventoryAmount[i,j] = stack;
 						
 						}
 						else{

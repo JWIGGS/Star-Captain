@@ -104,7 +104,7 @@ for(var i = 0; i<length; i++){
 
 //expand component connections
 for(var i = 0; i<length; i++){
-	if(componentMap[i]!="" and componentMap[i]!="_" and map_data(global.itemData,itemDataRole,componentMap[i])="attachment"){
+	if(componentMap[i]!="" and componentMap[i]!="_" and map_data(global.itemData,itemDataClass,componentMap[i])="attachment"){
 		
 		var horizontalCheck = map_data(global.itemData,itemDataConnectionUp,componentMap[i]);
 		
@@ -150,7 +150,7 @@ for(var i = 0; i<length; i++){
 
 
 //update matrix mouse
-matrixMouseX = ((mouse_x - global.player.x + global.player.sprite_xoffset -spaceshipSpriteOffset- spaceshipOffsetX) div 32) + boolean_return(mouse_x - global.player.x + global.player.sprite_xoffset-spaceshipSpriteOffset - spaceshipOffsetX<0,-1,0);
+matrixMouseX = ((mouse_x - global.player.x + global.player.sprite_xoffset -spaceshipSpriteOffset - spaceshipOffsetX) div 32) + boolean_return(mouse_x - global.player.x + global.player.sprite_xoffset-spaceshipSpriteOffset - spaceshipOffsetX<0,-1,0);
 matrixMouseY = ((mouse_y - global.player.y + global.player.sprite_yoffset -spaceshipSpriteOffset - spaceshipOffsetY) div 32) + boolean_return(mouse_y - global.player.y + global.player.sprite_yoffset-spaceshipSpriteOffset - spaceshipOffsetY<0,-1,0);
 
 

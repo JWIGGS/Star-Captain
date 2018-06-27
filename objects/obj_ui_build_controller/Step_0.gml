@@ -38,16 +38,12 @@ switch(layerSelected){
 		
 		if(global.player.inventoryMouseAmount<=0){
 			global.player.inventoryMouseItem="";
-
 		}
 		
 		//editing - adding blocks
 		if(global.player.inventoryMouseItem!=""){
-			
-			
-			
-			
-			switch(map_data(global.itemData,itemDataRole,global.player.inventoryMouseItem)){
+
+			switch(map_data(global.itemData,itemDataClass,global.player.inventoryMouseItem)){
 				
 				//hull
 				case "material":
@@ -71,6 +67,7 @@ switch(layerSelected){
 
 					
 					if(mouse_check_button(mb_left) and placeable){
+						
 
 
 						gridX[length] = matrixMouseX;

@@ -31,7 +31,7 @@ switch(layerSelected){
 		if(global.player.inventoryMouseItem!=""){
 			
 			
-			switch(map_data(global.itemData, itemDataRole,global.player.inventoryMouseItem)){
+			switch(map_data(global.itemData, itemDataClass,global.player.inventoryMouseItem)){
 				
 				
 				//hull
