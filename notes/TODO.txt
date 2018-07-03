@@ -2,7 +2,6 @@ SOLVABLE BUGS:
 
 inventory_add_item will go into endless loop when you add more items than the inventory can hold
 collisions for player doesnt work when spaceship is rotating
-block placement for negative matrix vaues are off by 1
 
 mouse is too fine due to zooming
 	need to scale
@@ -28,6 +27,8 @@ Tools
 Interctions with components
 	Control panel controls connected components
 	Engines need fuel
+	
+Player hotbar
 
 
 

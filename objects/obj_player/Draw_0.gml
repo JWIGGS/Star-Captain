@@ -3,10 +3,8 @@
 if(inventoryMouseItem != "" and inventoryMouseAmount >0){
 
 	if(control){
-		//draw hull
-		
-		
-		
+		//draw placement preview
+
 		switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 			case "material":
 				

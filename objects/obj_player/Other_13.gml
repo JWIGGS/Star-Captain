@@ -4,7 +4,6 @@
 matrixMouseX = point_to_matrix(mouse_x,mouse_y,spaceship,"x");
 matrixMouseY = point_to_matrix(mouse_x,mouse_y,spaceship,"y");
 
-	
 
 switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 				
@@ -91,7 +90,9 @@ switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 					
 			if(matrixMouseX >=0 and matrixMouseX<spaceship.width and matrixMouseY>=0 and matrixMouseY<spaceship.height){
 				placeable = spaceship.indexMap[matrixMouseX,matrixMouseY]=-1 or (spaceship.indexMap[matrixMouseX,matrixMouseY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX,matrixMouseY]]!="" and spaceship.wallMap[spaceship.indexMap[matrixMouseX,matrixMouseY]]="");
-	
+				
+				
+				
 				type = boolean_return(spaceship.indexMap[matrixMouseX,matrixMouseY]=-1,"hull","wall");
 				
 
