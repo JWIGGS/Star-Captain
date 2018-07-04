@@ -2224,6 +2224,25 @@
             }
         },
         {
+            "Key": "93e13ed0-be9a-42bd-9d76-17122d488a18",
+            "Value": {
+                "id": "9b5eca78-f0b8-492f-9a44-5b880139d77c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/obj_item_drop\/obj_item_drop.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "94d94d74-9040-4178-b08e-e6a3305f1093",
             "Value": {
                 "id": "511ad78d-4574-4887-a097-6eb489b5e743",

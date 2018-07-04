@@ -341,7 +341,104 @@ switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 			
 			case "drill":
 				if(mouse_check_button_pressed(mb_left)){
+					var deleteIndex = spaceship.indexMap[matrixMouseX,matrixMouseY];
+					
+					if(deleteIndex!=-1){
+						
+						with(spaceship){
+							
+							var type = "hull";
+							
+							if(componentMap[deleteIndex]!=""){
+								inventory_add_item(componentMap[deleteIndex],1,other);
+								type = map_data(global.itemData,itemDataClass,componentMap[deleteIndex]);
+							}
+							else if(wallMap[deleteIndex]!=""){
+								inventory_add_item(wallMaterialMap[deleteIndex],1,other);
+								type = "wall";
+							}
+							else{
+								inventory_add_item(hullMaterialMap[deleteIndex],1,other);
+							}
+
+							var deleteWidth = boolean_return(componentMap[deleteIndex]!="",map_data(global.itemData,itemDataWidth,componentMap[deleteIndex]),1);
+							var deleteHeight = boolean_return(componentMap[deleteIndex]!="",map_data(global.itemData,itemDataHeight,componentMap[deleteIndex]),1);
+
+							var deleteAmount = deleteWidth*deleteHeight;
+							
+							var clearBlock = false;
+
+							switch(type){
+								
+								case "module":
+									componentMap[deleteIndex] = "";
+									keyMap[deleteIndex] = "";
+
+									break;
+									
+								case "wall":
+									wallMap[deleteIndex] = "";
+									wallMaterialMap[deleteIndex] = "";
+									break;
+									
+								case "hull":
+								case "attachment":
+									clearBlock = true;
+									break;
+
+							}
+							
+							if(clearBlock){
+								for(var j =0; j<deleteAmount; j++){
+										
+									length--;
+										
+									for(var k = deleteIndex; k<length; k++){
+									
+										gridX[k] = gridX[k+1];
+										gridY[k] = gridY[k+1];
+										
+										hullMap[k] = hullMap[k+1];
+										hullMaterialMap[k] = hullMaterialMap[k+1];
+									
+										wallMap[k] = wallMap[k+1];
+										wallMaterialMap[k] = wallMaterialMap[k+1];
+
+										rotationMap[k] = rotationMap[k+1];
+										flipMap[k] = flipMap[k+1];
+									
+										componentMap[k] = componentMap[k+1];
+										refMap[k] = refMap[k+1]-1;
+										keyMap[k] = keyMap[k+1];
+									}
 				
+									gridX[length] = 0;
+									gridY[length] = 0;
+								
+									hullMap[length] = "";
+									hullMaterialMap[length] = "";
+								
+									wallMap[length] = "";
+									wallMaterialMap[length] = "";
+
+									rotationMap[length] = 0;
+									flipMap[length] = 1;
+								
+									componentMap[length] = "";
+									refMap[length] = -1;
+									keyMap[length] = "";
+								
+					
+								}
+							}
+							
+							
+							//update spaceship
+							event_user(3);
+						
+						}
+					
+					}
 				}
 				
 				

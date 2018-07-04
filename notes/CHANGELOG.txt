@@ -2,8 +2,10 @@ CHANGELOG: Latest first
 
 
 July 4
-	Player can place hull blocks only when connected
+	Player can place blocks only when connected to ship
 	Added quarter and corner_edge hull shapes
+	Added Block destruction from components->wall->hull
+	
 
 ---LOTS OF UNTRACKED CHANGES HAPPENED IN THIS SPACE OF TIME---
 

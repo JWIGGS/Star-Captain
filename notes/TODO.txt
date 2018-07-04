@@ -9,14 +9,13 @@ mouse is too fine due to zooming
 
 WEIRD BUGS:
 
+Green connections dots move around
+
 
 
 TODO additions
 
-Component connection placement
-	
-components connect to walls not hull
-
+Drilled item drops
 
 Tools
 	Drills
