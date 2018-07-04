@@ -87,23 +87,89 @@ switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 			
 			placeable = true;
 			var type = "hull";
+			
+			if(matrixMouseX <-1 or matrixMouseX>spaceship.width or matrixMouseY<-1 or matrixMouseY>spaceship.height){
+				placeable = false
+			}
+			
+			if(placeable){
+				
+				if(matrixMouseX >-1 and matrixMouseX<spaceship.width and matrixMouseY>-1 and matrixMouseY<spaceship.height){
+					placeable = spaceship.indexMap[matrixMouseX,matrixMouseY]=-1 or (spaceship.indexMap[matrixMouseX,matrixMouseY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX,matrixMouseY]]!="" and spaceship.wallMap[spaceship.indexMap[matrixMouseX,matrixMouseY]]="");
+					type = boolean_return(spaceship.indexMap[matrixMouseX,matrixMouseY]=-1,"hull","wall");
+				}
+				
+				
+				//check for connection
+				if(placeable and type = "hull"){
 					
-			if(matrixMouseX >=0 and matrixMouseX<spaceship.width and matrixMouseY>=0 and matrixMouseY<spaceship.height){
-				placeable = spaceship.indexMap[matrixMouseX,matrixMouseY]=-1 or (spaceship.indexMap[matrixMouseX,matrixMouseY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX,matrixMouseY]]!="" and spaceship.wallMap[spaceship.indexMap[matrixMouseX,matrixMouseY]]="");
-				
-				
-				
-				type = boolean_return(spaceship.indexMap[matrixMouseX,matrixMouseY]=-1,"hull","wall");
+					var isConnected = false;
+					
+					for(var i = 0; i<4; i++){
+						
+						var offsetX = round(rotate_around_point(0,-1,0,0,i*90,"x"));
+						var offsetY = round(rotate_around_point(0,-1,0,0,i*90,"y"));
+
+						//right
+						if(matrixMouseX+offsetX>-1 and matrixMouseX+offsetX<spaceship.width and matrixMouseY+offsetY>-1 and matrixMouseY+offsetY<spaceship.height and map_data(global.hullData,wrap(hullDataConnectionRight+i-(rotationSelected div 90)+boolean_return(flipSelected=-1,boolean_return((rotationSelected mod 180 = 0 and (i=0 or i=2))or(rotationSelected mod 180 = 90 and (i=1 or i=3)),2,0),0),hullDataConnectionRight,hullDataConnectionDown+1),inventoryMouseBuildHull)){
+							
+							if(spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]]!=""){
+								
+								var otherRotationSelected = spaceship.rotationMap[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]];
+								var otherFlipSelected = spaceship.flipMap[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]];
+								
+								if(map_data(global.hullData,wrap(hullDataConnectionLeft+i-(otherRotationSelected div 90)+boolean_return(otherFlipSelected=-1,boolean_return((otherRotationSelected mod 180 = 0 and (i=0 or i=2))or(otherRotationSelected mod 180 = 90 and (i=1 or i=3)),2,0),0),hullDataConnectionRight,hullDataConnectionDown+1),spaceship.hullMap[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]])){
+									isConnected = true;
+								}
+							
+							}
+						}
+						
+					}
+					
+					/*
+					//right
+					if(!isConnected and matrixMouseX+1>-1 and matrixMouseX+1<spaceship.width and matrixMouseY>-1 and matrixMouseY<spaceship.height and map_data(global.hullData,wrap(hullDataConnectionRight-(rotationSelected div 90)+boolean_return(flipSelected,2,0),hullDataConnectionRight,hullDataConnectionDown+1),inventoryMouseBuildHull)){
+						
+						if(spaceship.indexMap[matrixMouseX+1,matrixMouseY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]]!=""){
+							
+							if(map_data(global.hullData,wrap(hullDataConnectionLeft-(spaceship.rotationMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]] div 90)+boolean_return(spaceship.flipMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]],2,0),hullDataConnectionRight,hullDataConnectionDown+1),spaceship.hullMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]])){
+								isConnected = true;	
+							}
+							
+						}
+					}
+					
+					//left
+					if(!isConnected and matrixMouseX-1>-1 and matrixMouseX-1>spaceship.width and matrixMouseY>-1 and matrixMouseY<spaceship.height and map_data(global.hullData,wrap(hullDataConnectionLeft-(rotationSelected div 90)+boolean_return(flipSelected,2,0),hullDataConnectionRight,hullDataConnectionDown+1),inventoryMouseBuildHull)){
+						
+						if(spaceship.indexMap[matrixMouseX-1,matrixMouseY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX-1,matrixMouseY]]!=""){
+							
+							if(map_data(global.hullData,wrap(hullDataConnectionRight-(spaceship.rotationMap[spaceship.indexMap[matrixMouseX-1,matrixMouseY]] div 90)+boolean_return(spaceship.flipMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]],2,0),hullDataConnectionRight,hullDataConnectionDown+1),spaceship.hullMap[spaceship.indexMap[matrixMouseX-1,matrixMouseY]])){
+								isConnected = true;	
+							}
+							
+						}
+					}
+					*/
+					
+					
+					
+					
+					
+					placeable = isConnected;
+					
+					
+					
+				}
 				
 
 			}
+			
 
 
 					
 			if(mouse_check_button_pressed(mb_left) and placeable){
-				console_log(type);
-			
-			
 			
 				//hull placement
 			

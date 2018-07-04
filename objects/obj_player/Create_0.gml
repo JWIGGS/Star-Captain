@@ -10,7 +10,7 @@ relativeDir = 0;
 //physics
 spdX = 0;
 spdY = 0;
-spdMove = 22.4; //1.4 m/s verage walk speed
+spdMove = 22.4; //1.4 m/s average walk speed
 mass = 70;
 dir = 90;
 spdAngle = 0;

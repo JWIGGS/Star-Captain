@@ -1,6 +1,12 @@
 CHANGELOG: Latest first
 
 
+July 4
+	Player can place hull blocks only when connected
+	Added quarter and corner_edge hull shapes
+
+---LOTS OF UNTRACKED CHANGES HAPPENED IN THIS SPACE OF TIME---
+
 June 1
 	Refactored grid to macro
 

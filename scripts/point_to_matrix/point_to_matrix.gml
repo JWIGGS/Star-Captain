@@ -18,10 +18,6 @@ var lengthY = lengthdir_y(pointDis,pointDir);
 var pointY = -round((lengthdir_x(lengthX,-ship.dir) - lengthdir_y(lengthY,-ship.dir)+(gridSize/2)) / gridSize);
 var pointX = round((lengthdir_y(lengthX,-ship.dir) + lengthdir_x(lengthY,-ship.dir)-(gridSize/2)) / gridSize);
 
-if(keyboard_check_pressed(ord("H"))){
-	console_log(xPos,yPos,originX,originY,rotX,rotY,pointX,pointY,lengthX,lengthY);
-}
-
 
 if(returnType = "x"){
 	return pointX;	

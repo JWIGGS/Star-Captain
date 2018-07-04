@@ -115,6 +115,25 @@
             }
         },
         {
+            "Key": "064a2c2f-558b-46bc-805a-a4eb76679973",
+            "Value": {
+                "id": "c902750a-d8a3-4d0c-b536-b160f95b4780",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aluminum_corner_edge\/spr_hull_aluminum_corner_edge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "09111916-1eca-4d43-a92f-9103823cdd97",
             "Value": {
                 "id": "57d59a08-9d1f-4b5d-aa22-efed94b8e6fb",
@@ -1255,6 +1274,25 @@
             }
         },
         {
+            "Key": "4d20d744-7d3b-4018-8dbf-f7884887aa98",
+            "Value": {
+                "id": "0e4001f8-5a0b-4633-aea9-4cf8eace05ef",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_iron_quarter\/spr_hull_iron_quarter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4dc05626-2a70-4d18-9e40-9c6980e4b1f2",
             "Value": {
                 "id": "2441473c-7bc3-4a39-9081-0234ac1b2f7b",
@@ -1575,6 +1613,25 @@
                 ],
                 "resourcePath": "scripts\/value_to_2d\/value_to_2d.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "692b7371-2e2d-4d48-bd52-b8dd92b05740",
+            "Value": {
+                "id": "cf0892ee-36b1-4d10-aacf-aa970e96a61c",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_nanonium_quarter\/spr_hull_nanonium_quarter.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2186,6 +2243,25 @@
             }
         },
         {
+            "Key": "94eb9001-67f4-4553-a46b-c07a35307c2a",
+            "Value": {
+                "id": "2709ed07-4a31-4f58-b1ec-3878fced15b7",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_starlite_quarter\/spr_hull_starlite_quarter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9597e866-7b7a-43b5-92a9-8529e96f3efd",
             "Value": {
                 "id": "7fa040dd-405f-4d59-959b-66fa09bae04e",
@@ -2509,6 +2585,25 @@
             }
         },
         {
+            "Key": "a77a412c-cd38-4b15-a391-17b7687832e6",
+            "Value": {
+                "id": "98de8d0f-b920-4c68-ad29-b2cc5efd57bd",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_titanium_corner_edge\/spr_hull_titanium_corner_edge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a82959d7-0faa-4e0c-86fa-ffce98733103",
             "Value": {
                 "id": "e71392f3-5a7f-40e9-b105-a7f11f71805a",
@@ -2620,6 +2715,25 @@
                 ],
                 "resourcePath": "scripts\/angle_normalize\/angle_normalize.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "aa9405be-7f07-4dc2-a37a-c5529b43ad96",
+            "Value": {
+                "id": "c07228c1-ab2a-40f9-ab8c-a9db8ae02943",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_nanonium_corner_edge\/spr_hull_nanonium_corner_edge.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -2851,6 +2965,25 @@
             }
         },
         {
+            "Key": "b986d06a-00f2-4278-888a-e4b8bcc0ab89",
+            "Value": {
+                "id": "74735480-437b-4d0c-b58c-047520099dbb",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aerogel_corner_edge\/spr_hull_aerogel_corner_edge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ba2ba6c2-810f-46db-abf7-cfefab0d4369",
             "Value": {
                 "id": "af34f122-1176-4fc0-86e2-b848ca7a7dcf",
@@ -2885,6 +3018,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_icon_trash\/spr_icon_trash.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bc5418be-7bf6-4fb8-8b8e-35141c375328",
+            "Value": {
+                "id": "cd46c35a-84bd-4d82-814a-627dc80f87c1",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aluminum_quarter\/spr_hull_aluminum_quarter.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -2965,6 +3117,44 @@
             }
         },
         {
+            "Key": "c043066c-cb7f-4742-b71a-e9916580de27",
+            "Value": {
+                "id": "e5d149e2-336f-444f-83b3-edf0533ba09f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_aerogel_quarter\/spr_hull_aerogel_quarter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c149be85-4594-4b4c-84d7-6e8febc71ea1",
+            "Value": {
+                "id": "a8e85003-3226-4bbc-9634-0c329aab74a5",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_titanium_quarter\/spr_hull_titanium_quarter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c1d35f8c-21ee-4295-bfb2-6d3bdcb01801",
             "Value": {
                 "id": "ecbca575-982e-4db3-9935-c5bdf2e1079a",
@@ -3037,6 +3227,25 @@
                     "default"
                 ],
                 "resourcePath": "sprites\/spr_hull_nanonium_edge_half\/spr_hull_nanonium_edge_half.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c9ae378f-3fbf-4a53-8e26-458055858a6e",
+            "Value": {
+                "id": "0c3d1ae0-ca30-483a-938b-7ccb4fa4d3d4",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_iron_corner_edge\/spr_hull_iron_corner_edge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -3817,6 +4026,25 @@
                 ],
                 "resourcePath": "options\/mac\/options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f78f7b90-e7ec-42ce-8c3c-026a73fb5a66",
+            "Value": {
+                "id": "549e2eb9-2c30-4491-9412-8c8cc47e7c32",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sprites\/spr_hull_starlite_corner_edge\/spr_hull_starlite_corner_edge.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

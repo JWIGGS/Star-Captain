@@ -4,7 +4,7 @@ inventory_add_item will go into endless loop when you add more items than the in
 collisions for player doesnt work when spaceship is rotating
 
 mouse is too fine due to zooming
-	need to scale
+	need to scale up x4
 
 
 WEIRD BUGS:
@@ -13,8 +13,9 @@ WEIRD BUGS:
 
 TODO additions
 
-Limitations on where you can and cannot place blocks
-	Must be connected to spaceship
+Component connection placement
+	
+components connect to walls not hull
 
 
 Tools
@@ -27,6 +28,8 @@ Tools
 Interctions with components
 	Control panel controls connected components
 	Engines need fuel
+	
+
 	
 Player hotbar
 

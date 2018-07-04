@@ -146,8 +146,28 @@ ds_map_add(global.hullConnection7,object,true);
 ds_map_add(global.hullConnection8,object,true);
 
 
+var object = "corner_edge";
+global.hull[2] = "corner_edge";
+ds_map_add(global.hullConnectionRight,object,true);
+ds_map_add(global.hullConnectionUp,object,true);
+ds_map_add(global.hullConnectionLeft,object,false);
+ds_map_add(global.hullConnectionDown,object,true);
+ds_map_add(global.hullSize,object,0.777777777778);
+ds_map_add(global.hullCogX,object,2.0);
+ds_map_add(global.hullCogY,object,2.0);
+ds_map_add(global.hullConnection0,object,false);
+ds_map_add(global.hullConnection1,object,true);
+ds_map_add(global.hullConnection2,object,true);
+ds_map_add(global.hullConnection3,object,false);
+ds_map_add(global.hullConnection4,object,true);
+ds_map_add(global.hullConnection5,object,true);
+ds_map_add(global.hullConnection6,object,true);
+ds_map_add(global.hullConnection7,object,true);
+ds_map_add(global.hullConnection8,object,true);
+
+
 var object = "round_outer";
-global.hull[2] = "round_outer";
+global.hull[3] = "round_outer";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,false);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -167,7 +187,7 @@ ds_map_add(global.hullConnection8,object,true);
 
 
 var object = "round_inner";
-global.hull[3] = "round_inner";
+global.hull[4] = "round_inner";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,false);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -187,7 +207,7 @@ ds_map_add(global.hullConnection8,object,true);
 
 
 var object = "half";
-global.hull[4] = "half";
+global.hull[5] = "half";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,true);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -207,14 +227,14 @@ ds_map_add(global.hullConnection8,object,true);
 
 
 var object = "edge_half";
-global.hull[5] = "edge_half";
+global.hull[6] = "edge_half";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,false);
 ds_map_add(global.hullConnectionLeft,object,false);
 ds_map_add(global.hullConnectionDown,object,true);
 ds_map_add(global.hullSize,object,0.555555555556);
 ds_map_add(global.hullCogX,object,8.0);
-ds_map_add(global.hullCogY,object,8.0);
+ds_map_add(global.hullCogY,object,4.0);
 ds_map_add(global.hullConnection0,object,false);
 ds_map_add(global.hullConnection1,object,false);
 ds_map_add(global.hullConnection2,object,true);
@@ -227,7 +247,7 @@ ds_map_add(global.hullConnection8,object,true);
 
 
 var object = "round_half";
-global.hull[6] = "round_half";
+global.hull[7] = "round_half";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,false);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -246,8 +266,28 @@ ds_map_add(global.hullConnection7,object,true);
 ds_map_add(global.hullConnection8,object,true);
 
 
+var object = "quarter";
+global.hull[8] = "quarter";
+ds_map_add(global.hullConnectionRight,object,true);
+ds_map_add(global.hullConnectionUp,object,false);
+ds_map_add(global.hullConnectionLeft,object,false);
+ds_map_add(global.hullConnectionDown,object,true);
+ds_map_add(global.hullSize,object,0.444444444444);
+ds_map_add(global.hullCogX,object,8.0);
+ds_map_add(global.hullCogY,object,8.0);
+ds_map_add(global.hullConnection0,object,false);
+ds_map_add(global.hullConnection1,object,false);
+ds_map_add(global.hullConnection2,object,false);
+ds_map_add(global.hullConnection3,object,false);
+ds_map_add(global.hullConnection4,object,true);
+ds_map_add(global.hullConnection5,object,true);
+ds_map_add(global.hullConnection6,object,false);
+ds_map_add(global.hullConnection7,object,true);
+ds_map_add(global.hullConnection8,object,true);
+
+
 var object = "edge_quarter";
-global.hull[7] = "edge_quarter";
+global.hull[9] = "edge_quarter";
 ds_map_add(global.hullConnectionRight,object,true);
 ds_map_add(global.hullConnectionUp,object,false);
 ds_map_add(global.hullConnectionLeft,object,false);
@@ -266,7 +306,7 @@ ds_map_add(global.hullConnection7,object,true);
 ds_map_add(global.hullConnection8,object,true);
 
 
-#macro hullAmount 8
+#macro hullAmount 10
 
 
 /////////////////////////
@@ -1023,7 +1063,7 @@ ds_map_add(global.itemEnergyGenerated,object,0.0);
 ds_map_add(global.itemEnergyConsumption,object,0.0);
 ds_map_add(global.itemEnergyStored,object,0.0);
 ds_map_add(global.itemRateOfFire,object,0.0);
-ds_map_add(global.itemWeaponDamage,object,0.0);
+ds_map_add(global.itemWeaponDamage,object,200.0);
 ds_map_add(global.itemWeaponDeviation,object,0.0);
 ds_map_add(global.itemWeaponVolley,object,0.0);
 ds_map_add(global.itemWeaponVolleyDelay,object,0.0);
