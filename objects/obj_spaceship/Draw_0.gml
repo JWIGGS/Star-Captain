@@ -40,7 +40,9 @@ for(var i = 0; i<length; i++){
 	
 	if(componentMap[i]!="_"){
 		draw_set_color(boolean_return(connectionMap[gridX[i],gridY[i]],c_lime,c_red));
-		//draw_circle(rotX,rotY,4,false);
+		draw_set_alpha(.2);
+		draw_circle(rotX,rotY,4,false);
+		draw_set_alpha(1);
 	}
 	
 	

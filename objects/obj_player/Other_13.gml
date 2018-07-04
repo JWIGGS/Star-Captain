@@ -110,65 +110,25 @@ switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 						var offsetX = round(rotate_around_point(0,-1,0,0,i*90,"x"));
 						var offsetY = round(rotate_around_point(0,-1,0,0,i*90,"y"));
 
-						//right
 						if(matrixMouseX+offsetX>-1 and matrixMouseX+offsetX<spaceship.width and matrixMouseY+offsetY>-1 and matrixMouseY+offsetY<spaceship.height and map_data(global.hullData,wrap(hullDataConnectionRight+i-(rotationSelected div 90)+boolean_return(flipSelected=-1,boolean_return((rotationSelected mod 180 = 0 and (i=0 or i=2))or(rotationSelected mod 180 = 90 and (i=1 or i=3)),2,0),0),hullDataConnectionRight,hullDataConnectionDown+1),inventoryMouseBuildHull)){
 							
 							if(spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]]!=""){
-								
-								var otherRotationSelected = spaceship.rotationMap[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]];
-								var otherFlipSelected = spaceship.flipMap[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]];
-								
-								if(map_data(global.hullData,wrap(hullDataConnectionLeft+i-(otherRotationSelected div 90)+boolean_return(otherFlipSelected=-1,boolean_return((otherRotationSelected mod 180 = 0 and (i=0 or i=2))or(otherRotationSelected mod 180 = 90 and (i=1 or i=3)),2,0),0),hullDataConnectionRight,hullDataConnectionDown+1),spaceship.hullMap[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]])){
-									isConnected = true;
-								}
+
+								isConnected = spaceship.connectionMapDirection[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY],i];
 							
 							}
 						}
 						
 					}
-					
-					/*
-					//right
-					if(!isConnected and matrixMouseX+1>-1 and matrixMouseX+1<spaceship.width and matrixMouseY>-1 and matrixMouseY<spaceship.height and map_data(global.hullData,wrap(hullDataConnectionRight-(rotationSelected div 90)+boolean_return(flipSelected,2,0),hullDataConnectionRight,hullDataConnectionDown+1),inventoryMouseBuildHull)){
-						
-						if(spaceship.indexMap[matrixMouseX+1,matrixMouseY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]]!=""){
-							
-							if(map_data(global.hullData,wrap(hullDataConnectionLeft-(spaceship.rotationMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]] div 90)+boolean_return(spaceship.flipMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]],2,0),hullDataConnectionRight,hullDataConnectionDown+1),spaceship.hullMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]])){
-								isConnected = true;	
-							}
-							
-						}
-					}
-					
-					//left
-					if(!isConnected and matrixMouseX-1>-1 and matrixMouseX-1>spaceship.width and matrixMouseY>-1 and matrixMouseY<spaceship.height and map_data(global.hullData,wrap(hullDataConnectionLeft-(rotationSelected div 90)+boolean_return(flipSelected,2,0),hullDataConnectionRight,hullDataConnectionDown+1),inventoryMouseBuildHull)){
-						
-						if(spaceship.indexMap[matrixMouseX-1,matrixMouseY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX-1,matrixMouseY]]!=""){
-							
-							if(map_data(global.hullData,wrap(hullDataConnectionRight-(spaceship.rotationMap[spaceship.indexMap[matrixMouseX-1,matrixMouseY]] div 90)+boolean_return(spaceship.flipMap[spaceship.indexMap[matrixMouseX+1,matrixMouseY]],2,0),hullDataConnectionRight,hullDataConnectionDown+1),spaceship.hullMap[spaceship.indexMap[matrixMouseX-1,matrixMouseY]])){
-								isConnected = true;	
-							}
-							
-						}
-					}
-					*/
-					
-					
-					
-					
-					
+	
 					placeable = isConnected;
-					
-					
+
 					
 				}
 				
 
 			}
 			
-
-
-					
 			if(mouse_check_button_pressed(mb_left) and placeable){
 			
 				//hull placement
@@ -280,6 +240,48 @@ switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 									
 			}
 		}
+		
+		//check for connections
+		
+		if(placeable and (matrixMouseX <-1 or matrixMouseX>spaceship.width or matrixMouseY<-1 or matrixMouseY>spaceship.height)){
+			placeable = false
+		}
+		
+		
+		if(placeable){
+			
+			var horizontalCheck = map_data(global.itemData,itemDataConnectionUp,inventoryMouseItem);
+		
+			var checkLength = boolean_return(horizontalCheck,map_data(global.itemData,itemDataWidth,inventoryMouseItem),map_data(global.itemData,itemDataHeight,inventoryMouseItem));
+
+			var checkAngle = rotationSelected + boolean_return(horizontalCheck,0,90)+boolean_return(flipSelected=-1,180,0);
+		
+			var checkXStart = matrixMouseX - round(rotate_around_point(1,0,0,0,checkAngle,"x"));
+			var checkYStart = matrixMouseY - round(rotate_around_point(1,0,0,0,checkAngle,"y"));
+
+			var isConnected = true;
+
+			for(var j = 0; j<checkLength; j++){
+			
+				if(isConnected){
+					var checkX = checkXStart - round(rotate_around_point(j,0,0,0,checkAngle-90,"x"));
+					var checkY = checkYStart - round(rotate_around_point(j,0,0,0,checkAngle-90,"y"));
+			
+					isConnected = checkX>=0 and checkX<spaceship.width and checkY>=0 and checkY<spaceship.height and spaceship.indexMap[checkX,checkY]!=-1 and spaceship.hullMap[spaceship.indexMap[checkX,checkY]]!="" and spaceship.connectionMap[checkX,checkY] and spaceship.connectionMapDirection[spaceship.indexMap[checkX,checkY],wrap((checkAngle div 90)-1,0,4)];
+				}
+				else{
+					break;	
+				}
+			
+			}
+			
+			placeable = isConnected;
+
+			
+		}
+		
+		
+		
 					
 		if(mouse_check_button_pressed(mb_left) and placeable) {
 

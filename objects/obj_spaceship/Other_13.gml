@@ -139,13 +139,11 @@ for(var i = 0; i<length; i++){
 				break;	
 			}
 			
-			
 		}
 		
 		connectionMap[gridX[i],gridY[i]] = connected;
 
 	}
-
 	
 }
 
