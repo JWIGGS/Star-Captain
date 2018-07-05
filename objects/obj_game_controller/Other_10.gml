@@ -1063,7 +1063,7 @@ ds_map_add(global.itemEnergyGenerated,object,0.0);
 ds_map_add(global.itemEnergyConsumption,object,0.0);
 ds_map_add(global.itemEnergyStored,object,0.0);
 ds_map_add(global.itemRateOfFire,object,0.0);
-ds_map_add(global.itemWeaponDamage,object,200.0);
+ds_map_add(global.itemWeaponDamage,object,10.0);
 ds_map_add(global.itemWeaponDeviation,object,0.0);
 ds_map_add(global.itemWeaponVolley,object,0.0);
 ds_map_add(global.itemWeaponVolleyDelay,object,0.0);

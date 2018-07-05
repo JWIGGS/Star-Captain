@@ -1,5 +1,13 @@
 CHANGELOG: Latest first
 
+July 5
+	Added and implemented item drops
+	Created index to point script
+	Fixed a bug with placement connections
+	Large attachments now drillable
+	Drill takes time to destroy things
+	Wall placement automatically default to hull block when hull is not a "full"
+	
 
 July 4
 	Player can place blocks only when connected to ship

@@ -3193,6 +3193,25 @@
             }
         },
         {
+            "Key": "c20633e7-481f-4ec5-8608-bebda580c571",
+            "Value": {
+                "id": "162bb5ac-ee75-4e48-a1d9-9ea6e4651c5a",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/create_item_drop\/create_item_drop.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c3405674-fce6-40db-a9aa-66e02fc8cca2",
             "Value": {
                 "id": "8a8b34b0-b5c2-4d12-a942-82fcda167519",
@@ -3513,6 +3532,25 @@
                 ],
                 "resourcePath": "sprites\/spr_hull_aluminum_full\/spr_hull_aluminum_full.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d0a9e0e4-027a-488d-b190-c7b2858ecb67",
+            "Value": {
+                "id": "a4c6c613-da3e-49ee-9e25-b602df532b31",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "scripts\/index_to_point\/index_to_point.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -4212,7 +4250,9 @@
         "3001bd62-3cd8-4b88-a979-8c70a1ef70f1",
         "4b08719b-d059-4e09-bd5d-2458cfabee80",
         "c1d35f8c-21ee-4295-bfb2-6d3bdcb01801",
-        "4649ad16-4d3c-46de-ac48-9836ca665032"
+        "4649ad16-4d3c-46de-ac48-9836ca665032",
+        "c20633e7-481f-4ec5-8608-bebda580c571",
+        "d0a9e0e4-027a-488d-b190-c7b2858ecb67"
     ],
     "tutorial": ""
 }

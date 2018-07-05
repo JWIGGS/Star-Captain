@@ -67,6 +67,13 @@ if(inventoryMouseItem != "" and inventoryMouseAmount >0){
 				//draw placement preview
 				draw_sprite_ext(asset_get_index("spr_item_"+inventoryMouseItem),0,mouse_x,mouse_y,.5,.5,0,c_white,1);
 				
+				if(interactProgressMax!=0 and interactProgressCurrent!=0){
+					draw_set_color(c_gray);
+					draw_rectangle(mouse_x-8,mouse_y-8,mouse_x+8,mouse_y-6,false);
+					draw_set_color(c_ltgray);
+					draw_rectangle(mouse_x-8,mouse_y-8,mouse_x-8+(16*(interactProgressCurrent/interactProgressMax)),mouse_y-6,false);
+				}
+				
 				break;
 			
 				

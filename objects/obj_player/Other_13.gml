@@ -114,7 +114,7 @@ switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 							
 							if(spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]!=-1 and spaceship.hullMap[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY]]!=""){
 
-								isConnected = spaceship.connectionMapDirection[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY],i];
+								isConnected = spaceship.connectionMapDirection[spaceship.indexMap[matrixMouseX+offsetX,matrixMouseY+offsetY],wrap(i+2,0,4)];
 							
 							}
 						}
@@ -123,6 +123,18 @@ switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 	
 					placeable = isConnected;
 
+					
+				}
+				
+				if(placeable and type = "wall"){
+
+					
+					if(spaceship.hullMap[spaceship.indexMap[matrixMouseX,matrixMouseY]] != "full"){
+						inventoryMouseBuildHull = spaceship.hullMap[spaceship.indexMap[matrixMouseX,matrixMouseY]];
+						rotationSelected = spaceship.rotationMap[spaceship.indexMap[matrixMouseX,matrixMouseY]];
+						flipSelected = spaceship.flipMap[spaceship.indexMap[matrixMouseX,matrixMouseY]];
+					}
+					
 					
 				}
 				
@@ -340,8 +352,54 @@ switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 		switch(map_data(global.itemData,itemDataSubclass,inventoryMouseItem)){
 			
 			case "drill":
-				if(mouse_check_button_pressed(mb_left)){
-					var deleteIndex = spaceship.indexMap[matrixMouseX,matrixMouseY];
+
+				if(mouse_check_button(mb_left)){
+					
+					if(matrixMouseX>-1 and matrixMouseY>-1 and matrixMouseX<spaceship.width and matrixMouseY<spaceship.height and spaceship.indexMap[matrixMouseX,matrixMouseY]!=-1){
+						
+						interactBlock = spaceship.refMap[spaceship.indexMap[matrixMouseX,matrixMouseY]];
+					
+						if(interactBlock!=-1){
+					
+							//initial block delete
+							if(interactBlock!=interactBlockPrev and interactBlock!=-1){
+
+								if(spaceship.componentMap[interactBlock]!=""){
+									interactProgressMax = map_data(global.itemData,itemDataArmor,spaceship.componentMap[interactBlock]);
+								}
+								else if(spaceship.wallMap[interactBlock]!=""){
+									interactProgressMax = map_data(global.itemData,itemDataArmor,spaceship.wallMaterialMap[interactBlock])*map_data(global.hullData,hullDataSize,spaceship.wallMap[interactBlock]);
+								}
+								else{
+									interactProgressMax = map_data(global.itemData,itemDataArmor,spaceship.hullMaterialMap[interactBlock])*map_data(global.hullData,hullDataSize,spaceship.hullMap[interactBlock]);
+								}
+						
+								interactProgressCurrent = 0;
+						
+							}
+					
+							interactProgressCurrent += per_second(map_data(global.itemData,itemDataWeaponDamage,inventoryMouseItem));
+
+						}
+					
+					}
+				
+				}
+				else{
+					interactProgressCurrent = 0;
+					interactProgressMax = 0;
+					interactBlock = -1;
+				}
+			
+			
+				if(interactProgressCurrent>=interactProgressMax){
+					
+					interactProgressCurrent = 0;
+					interactProgressMax = 0;
+					
+					var deleteIndex = interactBlock;
+					interactBlock = -1;
+					
 					
 					if(deleteIndex!=-1){
 						
@@ -350,15 +408,15 @@ switch(map_data(global.itemData,itemDataClass,inventoryMouseItem)){
 							var type = "hull";
 							
 							if(componentMap[deleteIndex]!=""){
-								inventory_add_item(componentMap[deleteIndex],1,other);
+								create_item_drop(index_to_point(deleteIndex,"x"),index_to_point(deleteIndex,"y"),componentMap[deleteIndex],1);
 								type = map_data(global.itemData,itemDataClass,componentMap[deleteIndex]);
 							}
 							else if(wallMap[deleteIndex]!=""){
-								inventory_add_item(wallMaterialMap[deleteIndex],1,other);
+								create_item_drop(index_to_point(deleteIndex,"x"),index_to_point(deleteIndex,"y"),wallMaterialMap[deleteIndex],1);
 								type = "wall";
 							}
 							else{
-								inventory_add_item(hullMaterialMap[deleteIndex],1,other);
+								create_item_drop(index_to_point(deleteIndex,"x"),index_to_point(deleteIndex,"y"),hullMaterialMap[deleteIndex],1);
 							}
 
 							var deleteWidth = boolean_return(componentMap[deleteIndex]!="",map_data(global.itemData,itemDataWidth,componentMap[deleteIndex]),1);

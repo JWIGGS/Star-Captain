@@ -11,7 +11,9 @@
         "3001bd62-3cd8-4b88-a979-8c70a1ef70f1",
         "4b08719b-d059-4e09-bd5d-2458cfabee80",
         "c1d35f8c-21ee-4295-bfb2-6d3bdcb01801",
-        "4649ad16-4d3c-46de-ac48-9836ca665032"
+        "4649ad16-4d3c-46de-ac48-9836ca665032",
+        "c20633e7-481f-4ec5-8608-bebda580c571",
+        "d0a9e0e4-027a-488d-b190-c7b2858ecb67"
     ],
     "filterType": "GMScript",
     "folderName": "spaceship",

@@ -90,6 +90,11 @@ rotationSelected = 0;
 flipSelected = 1;
 placeable = true;
 
+interactBlock = -1;
+interactBlockPrev = -1;
+interactProgressMax = 0;
+interactProgressCurrent = 0;
+
 
 
 
